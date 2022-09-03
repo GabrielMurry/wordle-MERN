@@ -52,12 +52,12 @@ const Grid = React.forwardRef((props, ref) => {
             const word = inputLetters.slice(-5).join('').toLowerCase()
             console.log('You entered: ' + word)
             if (doesWordExist(word)) {
-                console.log('Word exists!')
+                props.setWordExists(true)
                 setRow(prevRow => prevRow + 1)
                 compareToSolution(word)
             }
             else {
-                console.log('word does not exist')
+                props.setWordExists(false)
             }
         }
     }

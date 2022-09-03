@@ -76,6 +76,16 @@
     gap: 10px;
 }
 
+.word-does-not-exist-display {
+    position: absolute;
+    margin-top: 33.5rem;
+    background-color: black;
+    color: white;
+    padding: 8px;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
 .key-individual {
     display: grid;           
     justify-content: center;   
