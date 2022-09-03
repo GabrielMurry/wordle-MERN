@@ -18,7 +18,17 @@
     font-size: 35px;
 }
 
-.box-container {
+.win-or-lose-display {
+    position: absolute;
+    margin-top: 3.5rem;
+    background-color: black;
+    color: white;
+    padding: 8px;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+.grid-container {
     position: absolute;
     margin-top: 6rem;
     display: grid;

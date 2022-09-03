@@ -84,10 +84,10 @@ function App() {
       console.log('game over you win!')
       console.log('solution: ' + solutionWord)
     }
-    else if (guessRow > 6) { // problem: input last word in last row, ends automatically
-      setGameOver(true)                 // problem: as boxes are flipping, you are still able to type next word. DONT DO THAT
-      console.log('game over you lose') // problem: confetti falls too early
-      console.log('solition: ' + solutionWord)
+    else if (guessRow >= 6) { // problem: display "game over" or "you won" "great job!" etc
+      setGameOver(true)      // problem: dim the grid and keyboard. add stats.          
+      console.log('game over you lose')  // problem: display "not a word in our list" or something
+      console.log('solition: ' + solutionWord) // problem: if you close computer for a while in middle of playing a game, i think it reloads a new word. keep solution in local storage?
     }
   }
 
@@ -103,6 +103,7 @@ function App() {
     <main className='main-container'>
       {wordleWin && <Confetti />} 
       <h1 className='title'>Wordle</h1>
+      {gameOver && <h2 className='win-or-lose-display'>{wordleWin ? 'You win!' : 'You lose'}</h2>}
       <Grid boxes={boxes} setBoxes={setBoxes} solutionWord={solutionWord} colorKeyboard={colorKeyboard} ref={childRef} isGameOver={isGameOver} gameOver={gameOver}/>
       <Keyboard keys={keys} setKeys={setKeys} keyboardClicked={keyboardClicked}/>
     </main>

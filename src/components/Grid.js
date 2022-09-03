@@ -171,7 +171,7 @@ const Grid = React.forwardRef((props, ref) => {
 
 
     return (
-        <div className='box-container'>
+        <div className='grid-container'>
             {boxElements}
         </div>
     )
