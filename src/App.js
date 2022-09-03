@@ -85,9 +85,9 @@ function App() {
       console.log('game over you win!')
       console.log('solution: ' + solutionWord)
     }
-    else if (guessRow >= 6) { 
+    else if (guessRow >= 6) {  // problem: if user loses and does not figure out word. tell them solution
       setGameOver(true)      // problem: dim the grid and keyboard. add stats.          
-      console.log('game over you lose')  // problem: display "not a word in our list" or something
+      console.log('game over you lose') // problem: button asking user if they want to play again
       console.log('solition: ' + solutionWord) // problem: if you close computer for a while in middle of playing a game, i think it reloads a new word. keep solution in local storage?
     }
   }
@@ -107,6 +107,7 @@ function App() {
       {gameOver && <h2 className='win-or-lose-display'>{wordleWin ? 'You win!' : 'You lose'}</h2>}
       <Grid boxes={boxes} setBoxes={setBoxes} solutionWord={solutionWord} colorKeyboard={colorKeyboard} ref={childRef} setWordExists={setWordExists} isGameOver={isGameOver} gameOver={gameOver}/>
       {!wordExists && <h2 className='word-does-not-exist-display'>Word does not exist</h2>}
+      {gameOver && !wordleWin && <h2 className='solution-display'>Solution: {solutionWord}</h2>}
       <Keyboard keys={keys} setKeys={setKeys} keyboardClicked={keyboardClicked}/>
     </main>
   )

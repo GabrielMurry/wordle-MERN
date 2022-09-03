@@ -76,7 +76,8 @@
     gap: 10px;
 }
 
-.word-does-not-exist-display {
+.word-does-not-exist-display, 
+.solution-display {
     position: absolute;
     margin-top: 33.5rem;
     background-color: black;
