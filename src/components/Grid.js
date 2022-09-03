@@ -7,20 +7,25 @@ const Grid = React.forwardRef((props, ref) => {
     const [row, setRow] = React.useState(1)
     const [inputLetters, setInputLetters] = React.useState([])
     const [inputWord, setInputWord] = React.useState('')
+    const [paralysis, setParalysis] = React.useState(false)
 
     React.useEffect(() => {
 
         document.addEventListener('keydown', keyDownHandler)
 
         // if game over, prevent any more inputs
-        if (props.isGameOver(inputWord, row)) {
+        // or paralysis - prevents user from typing next word as previous rows' colors revealing
+        if (props.isGameOver(inputWord, row) || paralysis) {
             document.removeEventListener('keydown', keyDownHandler)
         }
+        // if (paralysis) {
+        //     document.removeEventListener('keydown', keyDownHandler)
+        // }
 
         return () => {
           document.removeEventListener('keydown', keyDownHandler)
         }
-    }, [inputLetters, row, inputWord])
+    }, [inputLetters, row, inputWord, paralysis])
 
 
     React.useImperativeHandle(ref, () => ({
@@ -68,7 +73,7 @@ const Grid = React.forwardRef((props, ref) => {
         return wordExists(word)
     }
 
-    const compareToSolution = async (word) => {
+    const compareToSolution = (word) => {
         const solutionWord = props.solutionWord
         const solutionArray = []
         for (let i = 0; i < solutionWord.length; i++) {
@@ -104,12 +109,12 @@ const Grid = React.forwardRef((props, ref) => {
                 }
             }
         }
-        await flipTile(comparisonArray, word)
-        // passColorsToKeyboard(comparisonArray, word)
+        flipTile(comparisonArray, word)
     }
 
     const flipTile = (comparisonArray, word) => {
         const guessRowStartIndex = inputLetters.length - 5
+        setParalysis(true)
         comparisonArray.forEach((placement, index) => {
             setTimeout(() => {
                 props.setBoxes(prevBoxes => prevBoxes.map((boxRows) => {
@@ -124,6 +129,7 @@ const Grid = React.forwardRef((props, ref) => {
                     // keyboard colors reveal a little too quick, so added another setTimeout
                     setTimeout(() => {
                         passColorsToKeyboard(comparisonArray, word)
+                        setParalysis(false)
                     }, 200)
                 }
             }, 300 * index)
