@@ -1,6 +1,6 @@
 import React from 'react'
 import Box from './Box'
-const wordExists = require('word-exists')
+const doesWordExist = require('word-exists')
 
 const Grid = React.forwardRef((props, ref) => {
 
@@ -60,10 +60,6 @@ const Grid = React.forwardRef((props, ref) => {
                 props.setWordExists(false)
             }
         }
-    }
-
-    const doesWordExist = (word) => {
-        return wordExists(word)
     }
 
     const compareToSolution = (word) => {

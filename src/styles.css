@@ -64,16 +64,11 @@
     border: 2px solid lightgray;
 }
 
-.keyboard-container {
-    position: absolute;
-    /* background-color: coral; */
-    margin-top: 37rem;
+.popup-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    padding: 10px;
-    width: 590px;
-    gap: 10px;
+    height: 100vh;
+    width: 100vw;
 }
 
 .word-does-not-exist-display, 
@@ -85,6 +80,33 @@
     padding: 8px;
     font-size: 15px;
     border-radius: 10px;
+}
+
+.play-again-button {
+    position: absolute;
+    z-index: 2;
+    margin-top: 42rem;
+    background-color: lightcoral;
+    color: white;
+    text-decoration: none;
+    border: none;
+    padding: 15px 32px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.keyboard-container {
+    position: absolute;
+    z-index: 1;
+    /* background-color: coral; */
+    margin-top: 37rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    width: 590px;
+    gap: 10px;
 }
 
 .key-individual {
