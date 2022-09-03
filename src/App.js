@@ -20,6 +20,7 @@ function App() {
     while (solutionWord[0].length !== 5) {
       solutionWord = randomWord({exactly: 1, maxLength: 5})
     }
+    solutionWord = 'trash'
     solutionWord = solutionWord.toString()
   }, [])
 
@@ -82,15 +83,12 @@ function App() {
       setGameOver(true)
       console.log('game over you win!')
       console.log('solution: ' + solutionWord)
-      return true
     }
     else if (guessRow > 6) { // problem: input last word in last row, ends automatically
       setGameOver(true)                 // problem: as boxes are flipping, you are still able to type next word. DONT DO THAT
       console.log('game over you lose') // problem: confetti falls too early
       console.log('solition: ' + solutionWord)
-      return true
     }
-    return false
   }
 
   // need access to function in child component (Grid). Not entirely great practice.

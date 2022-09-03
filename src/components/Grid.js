@@ -6,32 +6,26 @@ const Grid = React.forwardRef((props, ref) => {
 
     const [row, setRow] = React.useState(1)
     const [inputLetters, setInputLetters] = React.useState([])
-    const [inputWord, setInputWord] = React.useState('')
     const [paralysis, setParalysis] = React.useState(false)
 
     React.useEffect(() => {
 
-        document.addEventListener('keydown', keyDownHandler)
-
-        // if game over, prevent any more inputs
-        // or paralysis - prevents user from typing next word as previous rows' colors revealing
-        if (props.isGameOver(inputWord, row) || paralysis) {
-            document.removeEventListener('keydown', keyDownHandler)
-        }
-        // if (paralysis) {
-        //     document.removeEventListener('keydown', keyDownHandler)
-        // }
+        // // if game over, prevent any more inputs
+        // // or paralysis - prevents user from typing next word as previous rows' colors revealing
+        props.gameOver || paralysis 
+        ? document.removeEventListener('keydown', keyDownHandler) 
+        : document.addEventListener('keydown', keyDownHandler)
 
         return () => {
           document.removeEventListener('keydown', keyDownHandler)
         }
-    }, [inputLetters, row, inputWord, paralysis])
+    }, [inputLetters, row, props.gameOver, paralysis])
 
 
     React.useImperativeHandle(ref, () => ({
         keyboardClicked(keyLetter) {
-            // if game over, prevent any more keyboard click inputs
-            !props.gameOver && keyDownHandler(keyLetter)
+            // if game over or paralysis, prevent any more keyboard click inputs
+            (!props.gameOver && !paralysis) && keyDownHandler(keyLetter)
         }
     }))
     // pressing key on keyboard and inputting letter into wordle grid (handles enter and backspace)
@@ -57,7 +51,6 @@ const Grid = React.forwardRef((props, ref) => {
         else if ((event.key === 'Enter' || event.key === 'enter') && inputLetters.length === 5*row) {
             const word = inputLetters.slice(-5).join('').toLowerCase()
             console.log('You entered: ' + word)
-            setInputWord(word)
             if (doesWordExist(word)) {
                 console.log('Word exists!')
                 setRow(prevRow => prevRow + 1)
@@ -130,6 +123,7 @@ const Grid = React.forwardRef((props, ref) => {
                     setTimeout(() => {
                         passColorsToKeyboard(comparisonArray, word)
                         setParalysis(false)
+                        props.isGameOver(word, row)
                     }, 200)
                 }
             }, 300 * index)
