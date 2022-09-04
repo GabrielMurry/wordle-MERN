@@ -22,9 +22,9 @@ function App() {
     while (solutionWord[0].length !== 5) {
       solutionWord = randomWord({exactly: 1, maxLength: 5})
     }
-    solutionWord = 'trash'
+    console.log('solution word: ' + solutionWord)
     solutionWord = solutionWord.toString()
-  }, [])
+  }, [gameOver])
 
   function allNewBoxes() {
     const array = []
@@ -90,7 +90,7 @@ function App() {
       setGameOver(true)      // problem: add stats.          
       console.log('game over you lose') // problem: AND have them also press 'enter' to play again 
       console.log('solition: ' + solutionWord) // problem: if you close computer for a while in middle of playing a game, i think it reloads a new word. keep solution in local storage?
-    }
+    }                             // problem: solution is paper. I put caper, p should be green, but is yellow instead
   }
 
   // need access to function in child component (Grid). Not entirely great practice.

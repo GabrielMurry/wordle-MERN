@@ -80,29 +80,29 @@ const Grid = React.forwardRef((props, ref) => {
         for (let i = 0; i < word.length; i++) {
             for (let j = 0; j < solutionWord.length; j++) {
                 if (!solutionArray[j].isTaken && word[i] === solutionWord[j] && i === j) {
-                    comparisonArray.push('yes')
-                    solutionArray[j].isTaken = true
-                    solutionArray[j].matchedPieceIndex = i
-                    break
-                }
-                else if (!solutionArray[j].isTaken && word[i] === solutionWord[j] && i !== j) {
-                    comparisonArray.push('almost')
+                    comparisonArray[i] = 'yes'
                     solutionArray[j].isTaken = true
                     solutionArray[j].matchedPieceIndex = i
                     break
                 }
                 else if (solutionArray[j].isTaken && word[i] === solutionWord[j] && i === j) {
                     comparisonArray[solutionArray[j].matchedPieceIndex] = 'no'
-                    comparisonArray.push('yes')
+                    comparisonArray[i] = 'yes'
                     solutionArray[j].isTaken = true
                     solutionArray[j].matchedPieceIndex = i
                     break
                 }
+                else if (!solutionArray[j].isTaken && word[i] === solutionWord[j] && i !== j) {
+                    comparisonArray[i] = 'almost'
+                    solutionArray[j].isTaken = true
+                    solutionArray[j].matchedPieceIndex = i
+                }
                 else if (word[i] !== solutionWord[j] && j === solutionWord.length - 1) {
-                    comparisonArray.push('no')
+                    comparisonArray[i] = 'no'
                 }
             }
         }
+        console.log(comparisonArray)
         flipTile(comparisonArray, word)
     }
 
