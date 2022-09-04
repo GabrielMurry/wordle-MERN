@@ -3,7 +3,6 @@ import Grid from './components/Grid'
 import Keyboard from './components/Keyboard'
 import PopupDisplays from './components/PopupDisplays'
 import Results from './components/Results'
-import Confetti from 'react-confetti'
 let randomWord = require('random-words')
 let solutionWord
 
@@ -88,8 +87,8 @@ function App() {
       console.log('solution: ' + solutionWord)
     }
     else if (guessRow >= 6) { // problem: when displaying word does not exist, delete display when you press backspace
-      setGameOver(true)      // problem: dim the grid and keyboard. add stats.          
-      console.log('game over you lose') // problem: button asking user if they want to play again AND have them also press 'enter' to play again 
+      setGameOver(true)      // problem: add stats.          
+      console.log('game over you lose') // problem: AND have them also press 'enter' to play again 
       console.log('solition: ' + solutionWord) // problem: if you close computer for a while in middle of playing a game, i think it reloads a new word. keep solution in local storage?
     }
   }
@@ -101,15 +100,30 @@ function App() {
     childRef.current.keyboardClicked(keyLetter)
   }
 
+  function playAgain() {
+    setBoxes(allNewBoxes())
+    setKeys(allNewKeys())
+    setWordleWin(false)
+    setGameOver(false)
+    setWordExists(true)
+    childRef.current.newGame()
+  }
+
+  const styleOpacityChange = {
+    opacity: gameOver ? '0.5' : '1',
+    transition: gameOver ? 'opacity 1s 2.5s' : 'none'
+  }
+
 
   return (
-    <main className='main-container'>
-      {wordleWin && <Confetti />} 
-      <h1 className='title'>Wordle</h1>
-      <Grid boxes={boxes} setBoxes={setBoxes} solutionWord={solutionWord} colorKeyboard={colorKeyboard} ref={childRef} setWordExists={setWordExists} isGameOver={isGameOver} gameOver={gameOver}/>
-      <Keyboard keys={keys} setKeys={setKeys} keyboardClicked={keyboardClicked}/>
-      <PopupDisplays gameOver={gameOver} wordleWin={wordleWin} wordExists={wordExists} solutionWord={solutionWord}/>
-      {gameOver && <Results />}
+    <main className='main-container' >
+      <div className='game-section' style={styleOpacityChange}>
+        <h1 className='title'>Wordle</h1>
+        <Grid boxes={boxes} setBoxes={setBoxes} solutionWord={solutionWord} colorKeyboard={colorKeyboard} ref={childRef} setWordExists={setWordExists} isGameOver={isGameOver} gameOver={gameOver}/>
+        <Keyboard keys={keys} setKeys={setKeys} keyboardClicked={keyboardClicked}/>
+        <PopupDisplays gameOver={gameOver} wordleWin={wordleWin} wordExists={wordExists} solutionWord={solutionWord}/>
+      </div>
+      {gameOver && <Results playAgain={playAgain}/>}
     </main>
   )
 }

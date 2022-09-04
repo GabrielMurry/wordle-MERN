@@ -26,6 +26,11 @@ const Grid = React.forwardRef((props, ref) => {
         keyboardClicked(keyLetter) {
             // if game over or paralysis, prevent any more keyboard click inputs
             (!props.gameOver && !paralysis) && keyDownHandler(keyLetter)
+        },
+        newGame() {
+            setRow(1)
+            setInputLetters([])
+            setParalysis(false)
         }
     }))
     // pressing key on keyboard and inputting letter into wordle grid (handles enter and backspace)

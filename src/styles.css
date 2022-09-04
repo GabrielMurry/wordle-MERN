@@ -3,7 +3,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.main-container {
+.main-container, .game-section {
     display: flex;
     justify-content: center;
     /* wnat it to be size of viewport so confetti covers entire screen */
@@ -65,6 +65,7 @@
 }
 
 .popup-container {
+    position: absolute;
     display: flex;
     justify-content: center;
     height: 100vh;
@@ -80,20 +81,6 @@
     padding: 8px;
     font-size: 15px;
     border-radius: 10px;
-}
-
-.play-again-button {
-    position: absolute;
-    z-index: 2;
-    margin-top: 42rem;
-    background-color: lightcoral;
-    color: white;
-    text-decoration: none;
-    border: none;
-    padding: 15px 32px;
-    font-size: 20px;
-    border-radius: 10px;
-    cursor: pointer;
 }
 
 .keyboard-container {
@@ -125,4 +112,35 @@
 .key-individual:nth-child(20),
 .key-individual:nth-child(28) {
     width: 80px;
+}
+
+.results-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0;
+}
+@keyframes fadeIn { /* styled in Results.js */
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.play-again-button {
+    position: absolute;
+    z-index: 2;
+    margin-top: 42rem;
+    background-color: lightcoral;
+    color: white;
+    text-decoration: none;
+    border: none;
+    padding: 15px 32px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
 }

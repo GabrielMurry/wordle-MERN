@@ -1,14 +1,17 @@
 import React from 'react'
 
-function Results() {
+function Results(props) {
 
-    const playAgain = () => {
-        console.log('hi')
+    const resultsFadeIn = {
+        animationName: 'fadeIn',
+        animationDelay: '3s',
+        animationDuration: '1s',
+        animationFillMode: 'forwards' // so it stays at new opacity '1'
     }
 
     return (
-        <div>
-            <button className='play-again-button' onClick={playAgain}>Play Again?</button>
+        <div className='results-container' style={resultsFadeIn}>
+            <button className='play-again-button' onClick={props.playAgain}>Play Again?</button>
         </div>
     )
 }
