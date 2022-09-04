@@ -1,4 +1,5 @@
 import React from 'react'
+import Form from './components/Form'
 import Grid from './components/Grid'
 import Keyboard from './components/Keyboard'
 import PopupDisplays from './components/PopupDisplays'
@@ -23,7 +24,7 @@ function App() {
       solutionWord = randomWord({exactly: 1, maxLength: 5})
     }
     console.log('solution word: ' + solutionWord)
-    solutionWord = 'trash'
+    solutionWord = 'reach'
     solutionWord = solutionWord.toString()
   }, [gameOver])
 
@@ -116,15 +117,17 @@ function App() {
   }
 
 
+
   return (
     <main className='main-container' >
+      <Form />
       <div className='game-section' style={styleOpacityChange}>
         <h1 className='title'>Wordle</h1>
         <Grid boxes={boxes} setBoxes={setBoxes} solutionWord={solutionWord} colorKeyboard={colorKeyboard} ref={childRef} setWordExists={setWordExists} isGameOver={isGameOver} gameOver={gameOver}/>
         <Keyboard keys={keys} setKeys={setKeys} keyboardClicked={keyboardClicked}/>
         <PopupDisplays gameOver={gameOver} wordleWin={wordleWin} wordExists={wordExists} solutionWord={solutionWord}/>
       </div>
-      {gameOver && <Results playAgain={playAgain}/>}
+      {gameOver && <Results playAgain={playAgain} />}
     </main>
   )
 }

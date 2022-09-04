@@ -10,6 +10,7 @@ function Results(props) {
     }
 
     React.useEffect(() => {
+
         const listenForEnter = (event) => {
             if (event.key === 'Enter') {
                 props.playAgain()
