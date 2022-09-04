@@ -9,9 +9,22 @@ function Results(props) {
         animationFillMode: 'forwards' // so it stays at new opacity '1'
     }
 
+    React.useEffect(() => {
+        const listenForEnter = (event) => {
+            if (event.key === 'Enter') {
+                props.playAgain()
+            }
+        }
+        document.addEventListener('keydown', listenForEnter)
+        return () => {
+            document.removeEventListener('keydown', listenForEnter)
+        }
+    }, [])
+
     return (
         <div className='results-container' style={resultsFadeIn}>
-            <button className='play-again-button' onClick={props.playAgain}>Play Again?</button>
+            <button className='play-again-button' onClick={props.playAgain}>Play Again</button>
+            <p className='play-again-enter-key'>or Press Enter</p>
         </div>
     )
 }

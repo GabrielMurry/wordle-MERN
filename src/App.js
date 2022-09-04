@@ -23,6 +23,7 @@ function App() {
       solutionWord = randomWord({exactly: 1, maxLength: 5})
     }
     console.log('solution word: ' + solutionWord)
+    solutionWord = 'trash'
     solutionWord = solutionWord.toString()
   }, [gameOver])
 
@@ -88,7 +89,7 @@ function App() {
     }
     else if (guessRow >= 6) { // problem: when displaying word does not exist, delete display when you press backspace
       setGameOver(true)      // problem: add stats.          
-      console.log('game over you lose') // problem: AND have them also press 'enter' to play again 
+      console.log('game over you lose') 
       console.log('solition: ' + solutionWord) // problem: if you close computer for a while in middle of playing a game, i think it reloads a new word. keep solution in local storage?
     }                             // problem: solution is paper. I put caper, p should be green, but is yellow instead
   }
@@ -110,7 +111,7 @@ function App() {
   }
 
   const styleOpacityChange = {
-    opacity: gameOver ? '0.5' : '1',
+    opacity: gameOver ? '0.3' : '1',
     transition: gameOver ? 'opacity 1s 2.5s' : 'none'
   }
 

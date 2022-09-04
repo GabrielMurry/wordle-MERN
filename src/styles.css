@@ -144,3 +144,16 @@
     border-radius: 10px;
     cursor: pointer;
 }
+.play-again-button:hover {
+    background-color: rgb(222, 101, 101);
+}
+
+.play-again-enter-key {
+    position: absolute;
+    z-index: 2;
+    margin-top: 46rem;
+    background-color: lightcoral;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 10px;
+}
