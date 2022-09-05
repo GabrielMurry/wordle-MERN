@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/GabrielMurry/wordle-react.git/static/css/main.5e525181.css",
+    "main.js": "/GabrielMurry/wordle-react.git/static/js/main.9d159e0b.js",
+    "index.html": "/GabrielMurry/wordle-react.git/index.html",
+    "main.5e525181.css.map": "/GabrielMurry/wordle-react.git/static/css/main.5e525181.css.map",
+    "main.9d159e0b.js.map": "/GabrielMurry/wordle-react.git/static/js/main.9d159e0b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5e525181.css",
+    "static/js/main.9d159e0b.js"
+  ]
+}
