@@ -1,6 +1,6 @@
 {
   "name": "wordle-react",
-  "homepage": "https://GabrielMurry.github.io/wordle-react",
+  "homepage": "./",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
