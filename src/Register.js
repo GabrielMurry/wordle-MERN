@@ -1,13 +1,12 @@
 import { useRef, useState, useEffect } from 'react'
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import { faCheck, faTimes, faInfoCircle } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import axios from './api/axios'
+// import axios from './api/axios'
 
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/
-const REGISTER_URL = '/register'
+// const REGISTER_URL = '/register'
 
 const Register = (props) => {
     const userRef = useRef()
@@ -177,13 +176,11 @@ const Register = (props) => {
                         <button className='sign-up-button' disabled={!validName || !validPwd || !validMatch ? true : false}>Sign Up</button>
                     </form>
 
-                    <p>
+                    {/* <p>
                         Already registered?<br />
                         <span className="line">
-                            {/*put router link here*/}
-                            <a href="#">Sign In</a>
                         </span>
-                    </p>
+                    </p> */}
                 </section>
             )}
         </>

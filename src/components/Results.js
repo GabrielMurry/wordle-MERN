@@ -20,7 +20,7 @@ function Results(props) {
         return () => {
             document.removeEventListener('keydown', listenForEnter)
         }
-    }, [])
+    }, [props])
 
     return (
         <div className='results-container' style={resultsFadeIn}>
