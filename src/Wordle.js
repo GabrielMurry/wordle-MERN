@@ -23,7 +23,6 @@ function MainContent() {
       solutionWord = randomWord({exactly: 1, maxLength: 5})
     }
     console.log('solution word: ' + solutionWord)
-    solutionWord = 'reach'
     solutionWord = solutionWord.toString()
   }, [gameOver])
 

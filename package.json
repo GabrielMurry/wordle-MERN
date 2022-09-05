@@ -1,5 +1,6 @@
 {
   "name": "wordle-react",
+  "homepage": "https://GabrielMurry.github.io/wordle-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -22,6 +23,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "npm run start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -47,6 +50,7 @@
   },
   "devDependencies": {
     "cors": "^2.8.5",
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "gh-pages": "^4.0.0"
   }
 }
