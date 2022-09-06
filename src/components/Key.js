@@ -15,10 +15,12 @@ function Key(props) {
             return '#787878'
         }
         else if (props.correctPlace === 'almost') {
-            return '#d0bd55'
+            // return '#d0bd55'
+            return '#957DAD'
         }
         else if (props.correctPlace === 'yes') {
-            return '#6db562'
+            // return '#6db562'
+            return '#FEC8D8'
         }
     }
 
