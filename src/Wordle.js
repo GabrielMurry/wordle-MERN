@@ -119,7 +119,8 @@ function MainContent() {
   return (
     <main className='main-container' >
       <div className='game-section' style={styleOpacityChange}>
-        <h1 className='title'>Title</h1>
+        <h1 className='title'>Wordle</h1>
+        <h3 className='for-pau'>For Pau</h3>
         <Grid boxes={boxes} setBoxes={setBoxes} solutionWord={solutionWord} colorKeyboard={colorKeyboard} ref={childRef} setWordExists={setWordExists} isGameOver={isGameOver} gameOver={gameOver}/>
         <Keyboard keys={keys} setKeys={setKeys} keyboardClicked={keyboardClicked}/>
         <PopupDisplays gameOver={gameOver} wordleWin={wordleWin} wordExists={wordExists} solutionWord={solutionWord}/>
