@@ -187,14 +187,14 @@
     }
     .word-does-not-exist-display, 
     .solution-display {
-        margin-top: 32.5rem;
+        margin-top: 31.5rem;
         padding: 8px;
         font-size: 12px;
         border-radius: 8px;
     }
     .keyboard-container {
         /* margin-top: 58vh; */
-        margin-top: 35rem;
+        margin-top: 33rem;
         padding: 15px;
         width: 400px;
         gap: 5px;
@@ -208,12 +208,13 @@
         width: 48px;
     }
     .play-again-button {
-        margin-top: 36.9rem;
+        margin-top: 37.4rem;
         padding: 14px 31px;
         font-size: 18px;
     }
     .play-again-enter-key {
         visibility: hidden;
+        margin-top: 41rem;
     }
 }
 
