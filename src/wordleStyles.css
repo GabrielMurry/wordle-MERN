@@ -103,7 +103,7 @@
 .keyboard-container {
     position: absolute;
     z-index: 1;
-    margin-top: 39.5rem;
+    margin-top: 38.5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -176,7 +176,7 @@
 
 
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 414px) {
     .win-or-lose-display {
         margin-top: 17.1rem;
     }
@@ -187,13 +187,14 @@
     }
     .word-does-not-exist-display, 
     .solution-display {
-        margin-top: 31.2rem;
+        margin-top: 32.5rem;
         padding: 8px;
         font-size: 12px;
         border-radius: 8px;
     }
     .keyboard-container {
-        margin-top: 58vh;
+        /* margin-top: 58vh; */
+        margin-top: 35rem;
         padding: 15px;
         width: 400px;
         gap: 5px;
