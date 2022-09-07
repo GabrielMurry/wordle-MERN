@@ -14,15 +14,15 @@
 .title {
     font-family: 'Mitr', sans-serif;
     position: absolute;
-    margin-top: 5px;
+    margin-top: 15px;
     font-size: 35px;
 }
 
 .for-pau {
     font-family: 'Qwitcher Grypen', cursive;
     position: absolute;
-    margin-top: 36px;
-    margin-left: 8.2rem;
+    margin-top: 47px;
+    margin-left: 7.3rem;
     font-size: 15px;
     color: rgb(255, 165, 178);
     transform: rotate(-5deg);
@@ -30,19 +30,11 @@
 
 .grid-container {
     position: absolute;
-    margin-top: 6rem;
+    margin-top: 8rem;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     padding: 10px;
     gap: 5px;
-}
-
-.test {
-    position: absolute;
-}
-.test2 {
-    position: absolute;
-    margin-left: 400px;
 }
 
 .flip-box {
@@ -53,6 +45,17 @@
     /* If we wnat to change time it takes to move to the next tile --> Grid.js --> flipTile function --> setTimeout() */
     transition: transform 0.8s;
     transform-style: preserve-3d;
+}
+@keyframes box-jump-on-input {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 .flip-box-front, .flip-box-back {
@@ -68,10 +71,6 @@
     backface-visibility: hidden;
 }
 
-.flip-box-front {
-    border: 2px solid lightgray;
-}
-
 .popup-container {
     position: absolute;
     display: flex;
@@ -82,7 +81,7 @@
 
 .win-or-lose-display {
     position: absolute;
-    margin-top: 3.7rem;
+    margin-top: 5rem;
     background-color: black;
     color: white;
     padding: 8px;
@@ -93,7 +92,7 @@
 .word-does-not-exist-display, 
 .solution-display {
     position: absolute;
-    margin-top: 33.5rem;
+    margin-top: 35.4rem;
     background-color: black;
     color: white;
     padding: 8px;
@@ -105,13 +104,14 @@
     position: absolute;
     z-index: 1;
     /* background-color: coral; */
-    margin-top: 37rem;
+    /* margin-top: 39.5rem; */
+    margin-top: 72vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 10px;
-    width: 590px;
-    gap: 10px;
+    width: 560px;
+    gap: 8px;
 }
 
 .key-individual {
@@ -129,7 +129,7 @@
 
 .key-individual:nth-child(20),
 .key-individual:nth-child(28) {
-    width: 80px;
+    width: 75px;
 }
 
 .results-container {

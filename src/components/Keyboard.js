@@ -8,7 +8,7 @@ const Keyboard = (props) => {
     ))
 
     return (
-        <div className='keyboard-container'>
+        <div className='keyboard-container' >
             {keyElements}
         </div>
     )

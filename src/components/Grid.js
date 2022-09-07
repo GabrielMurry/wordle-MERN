@@ -105,9 +105,11 @@ const Grid = React.forwardRef((props, ref) => {
                     break
                 }
                 else if (!solutionArray[j].isTaken && word[i] === solutionWord[j] && i !== j) {
-                    comparisonArray[i] = 'almost'
-                    solutionArray[j].isTaken = true
-                    solutionArray[j].matchedPieceIndex = i
+                    if (comparisonArray[i] !== 'almost') {
+                        comparisonArray[i] = 'almost'
+                        solutionArray[j].isTaken = true
+                        solutionArray[j].matchedPieceIndex = i
+                    }
                 }
                 else if (word[i] !== solutionWord[j] && j === solutionWord.length - 1) {
                     if (comparisonArray[i] !== 'almost') {

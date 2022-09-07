@@ -9,18 +9,18 @@ function Key(props) {
 
     function getBackGroundColor() {
         if (props.correctPlace === 'blank') {
-            return '#d6d7d8'
+            return '#d2d5d8'
         }
         else if (props.correctPlace === 'no') {
             return '#787878'
         }
         else if (props.correctPlace === 'almost') {
             // return '#d0bd55'
-            return '#957DAD'
+            return '#b19cd9'
         }
         else if (props.correctPlace === 'yes') {
             // return '#6db562'
-            return '#FEC8D8'
+            return 'rgb(255, 165, 178)'
         }
     }
 
