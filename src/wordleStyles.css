@@ -103,9 +103,7 @@
 .keyboard-container {
     position: absolute;
     z-index: 1;
-    /* background-color: coral; */
-    /* margin-top: 39.5rem; */
-    margin-top: 72vh;
+    margin-top: 39.5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -180,33 +178,33 @@
 
 @media screen and (max-width: 480px) {
     .win-or-lose-display {
-        margin-top: 4.6rem;
+        margin-top: 17.1rem;
     }
     .grid-container {
-        margin-top: 7rem;
+        margin-top: 5rem;
         padding: 10px;
         gap: 5px;
     }
     .word-does-not-exist-display, 
     .solution-display {
-        margin-top: 34.4rem;
+        margin-top: 32rem;
     }
     .keyboard-container {
-        margin-top: 66vh;
+        margin-top: 34.5rem;
         padding: 15px;
-        width: 420px;
+        width: 400px;
         gap: 5px;
     }
     .key-individual { 
         height: 50px;
-        width: 34px;
+        width: 32px;
     }
     .key-individual:nth-child(20),
     .key-individual:nth-child(28) {
-        width: 50px;
+        width: 48px;
     }
     .play-again-button {
-        margin-top: 41.3rem;
+        margin-top: 38.8rem;
     }
     .play-again-enter-key {
         visibility: hidden;
