@@ -11,23 +11,6 @@
     width: 100vw;
 }
 
-.title {
-    font-family: 'Mitr', sans-serif;
-    position: absolute;
-    margin-top: 15px;
-    font-size: 35px;
-}
-
-.for-pau {
-    font-family: 'Qwitcher Grypen', cursive;
-    position: absolute;
-    margin-top: 47px;
-    margin-left: 7.3rem;
-    font-size: 15px;
-    color: rgb(255, 165, 178);
-    transform: rotate(-5deg);
-}
-
 .grid-container {
     position: absolute;
     margin-top: 8rem;
@@ -103,6 +86,7 @@
 .keyboard-container {
     position: absolute;
     z-index: 1;
+    /* bottom: 0; */
     margin-top: 38.5rem;
     display: flex;
     flex-wrap: wrap;
@@ -135,7 +119,7 @@
     display: flex;
     justify-content: center;
     height: 100vh;
-    width: 100vw;
+    width: 50vw;
     opacity: 0;
 }
 @keyframes fadeIn { /* styled in Results.js */
@@ -176,36 +160,49 @@
 
 
 
-@media screen and (max-width: 414px) {
+@media only screen and (device-width: 414px) and (device-height: 726px) {
+    .main-container {
+        position: absolute;
+        top: 0;
+    }
+    .main-container, .game-section {
+        width: 96vw;
+        height: 100vh;
+    }
     .win-or-lose-display {
+        z-index: 5;
         margin-top: 17.1rem;
     }
     .grid-container {
+        z-index: 1;
         margin-top: 5rem;
         padding: 10px;
         gap: 5px;
     }
     .word-does-not-exist-display, 
     .solution-display {
-        margin-top: 31.5rem;
+        margin-top: 31.6rem;
         padding: 8px;
         font-size: 12px;
         border-radius: 8px;
     }
     .keyboard-container {
         /* margin-top: 58vh; */
-        margin-top: 33rem;
-        padding: 15px;
-        width: 400px;
+        /* margin-top: 33rem; THIS USUALLY*/
+        /* bottom: 170px; how many pixels bottom bar takes up?*/
+        bottom: 0;
+        padding: 0;
+        padding-bottom: 20px;
+        width: 100%;
         gap: 5px;
     }
     .key-individual { 
         height: 50px;
-        width: 32px;
+        width: 35px;
     }
     .key-individual:nth-child(20),
     .key-individual:nth-child(28) {
-        width: 48px;
+        width: 55px;
     }
     .play-again-button {
         margin-top: 37.4rem;
@@ -217,25 +214,3 @@
         margin-top: 41rem;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

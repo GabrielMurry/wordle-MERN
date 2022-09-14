@@ -1,15 +1,23 @@
-import React from 'react'
-import Confetti from 'react-confetti'
+import React from "react";
+import Confetti from "react-confetti";
 
 function PopupDisplays(props) {
-    return (
-        <div className='popup-container'>
-            {props.wordleWin && <Confetti className='confetti'/>}
-            {props.gameOver && <h2 className='win-or-lose-display'>{props.wordleWin ? 'You win!' : 'You lose'}</h2>}
-            {props.gameOver && !props.wordleWin && <h2 className='solution-display'>Solution: {props.solutionWord}</h2>}
-            {!props.wordExists && <h2 className='word-does-not-exist-display'>Word does not exist</h2>}
-        </div>
-    )
+  return (
+    <div className="popup-container">
+      {props.wordleWin && <Confetti className="confetti" />}
+      {props.gameOver && (
+        <h2 className="win-or-lose-display">
+          {props.wordleWin ? "You win!" : "You lose"}
+        </h2>
+      )}
+      {props.gameOver && !props.wordleWin && (
+        <h2 className="solution-display">Solution: {props.solutionWord}</h2>
+      )}
+      {!props.wordExists && (
+        <h2 className="word-does-not-exist-display">Word does not exist</h2>
+      )}
+    </div>
+  );
 }
 
-export default PopupDisplays
+export default PopupDisplays;
