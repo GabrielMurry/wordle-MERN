@@ -193,7 +193,7 @@
         /* margin-top: 33rem; THIS USUALLY*/
         /* bottom: 170px; how many pixels bottom bar takes up?*/
         /* bottom: 170px; */
-        bottom: 0;
+        bottom: 65px;
         padding: 0;
         padding-bottom: 20px;
         width: 100%;
@@ -252,7 +252,7 @@
         /* margin-top: 33rem; THIS USUALLY*/
         /* bottom: 170px; how many pixels bottom bar takes up?*/
         /* bottom: 120px; */
-        bottom: 0;
+        bottom: 65px;
         padding: 0;
         padding-bottom: 20px;
         width: 100%;
