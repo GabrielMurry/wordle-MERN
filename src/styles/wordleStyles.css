@@ -160,6 +160,7 @@
 
 
 
+/* ex: iphone XR */
 @media (min-width: 400px) and (max-width: 450px) {
     .main-container {
         position: absolute;
@@ -216,6 +217,8 @@
     }
 }
 
+
+/* ex: iphone 13 */
 @media (min-width: 350px) and (max-width: 399px) {
     .main-container {
         position: absolute;

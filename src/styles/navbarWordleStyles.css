@@ -156,6 +156,7 @@
 
 
 
+/* ex: iphone XR */
 @media (min-width: 400px) and (max-width: 450px) {
     .navbar-title .title {
         margin-top: 10px; 
@@ -195,6 +196,8 @@
     }
 }
 
+
+/* ex: iphone 13 */
 @media (min-width: 350px) and (max-width: 399px) {
     .navbar-title .title {
         margin-top: 10px; 
