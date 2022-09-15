@@ -1,5 +1,5 @@
 import axios from "axios";
-const BASE_URL = "https://wordle-api.onrender.com";
+const BASE_URL = "https://wordle-api-usd8.onrender.com";
 
 export default axios.create({
   baseURL: BASE_URL,
