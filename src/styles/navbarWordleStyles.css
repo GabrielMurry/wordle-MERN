@@ -35,7 +35,6 @@
 
 .menu-backplate-shadow {
     width: 22vw;
-    margin-left: -8px;
     height: 100vh;
     margin-top: -58px;
     box-shadow: 2px 0 4px rgb(146 161 176 / 15%);
@@ -85,7 +84,6 @@
 }
 
 .navbar .hamburger-lines {
-    /* FIX: cursor pointer a bit off on hamburger */
     position: absolute;
     display: block;
     height: 24px;
@@ -157,11 +155,8 @@
 }
 
 
-/* @media screen and (max-width: 414px) { */
-@media only screen and (device-width: 414px) and (device-height: 726px) {
-    .navbar-title {
-        width: 96vw;
-    }
+
+@media (min-width: 400px) and (max-width: 450px) {
     .navbar-title .title {
         margin-top: 10px; 
         font-size: 30px; 
@@ -187,8 +182,46 @@
         left: 15px;
     }
     .menu-backplate-shadow {
-        width: 100vw;
-        margin-left: -8px;
+        width: 100%;
+        background-color: white;
+    }
+    .navbar-container .menu-items {
+        max-width: 100vw;
+        z-index: 2;
+        transform: translate(-110%);
+    }
+    .navbar input[type="checkbox"]:checked ~ .menu-items {
+        z-index: 2;
+    }
+}
+
+@media (min-width: 350px) and (max-width: 399px) {
+    .navbar-title .title {
+        margin-top: 10px; 
+        font-size: 30px; 
+    }
+    .navbar-title .for-pau {
+        margin-top: 38px;
+        margin-left: 6.8rem;
+        font-size: 12px;
+    }
+    .navbar .checkbox {
+        height: 30px;
+        width: 30px;
+        top: 0px;
+        left: 10px;
+    }
+    .navbar .hamburger-lines .line {
+        height: 3px;
+    }
+    .navbar .hamburger-lines {
+        height: 22px;
+        width: 28px;
+        top: 20px;
+        left: 15px;
+    }
+    .menu-backplate-shadow {
+        width: 100%;
         background-color: white;
     }
     .navbar-container .menu-items {

@@ -196,11 +196,13 @@ label,
 }
 
 
-@media only screen and (device-width: 414px) and (device-height: 726px) {
+/* ex: iphone XR */
+@media (min-width: 400px) and (max-width: 450px) {
     .signin-title,
     .register-title {
         font-size: 25px;
         padding-bottom: 40px;
+        margin-top: -25px;
     }
     .register-section,
     .login-section {
@@ -239,5 +241,61 @@ label,
     }
     .instructions {
         bottom: 0;
+    }
+    .dont-have-account-container,
+    .already-registered-container {
+        margin-bottom: 17rem;
+    }
+}
+
+/* ex: iphone 13 */
+@media (min-width: 350px) and (max-width: 399px) {
+    .signin-title,
+    .register-title {
+        font-size: 25px;
+        padding-bottom: 40px;
+        margin-top: -25px;
+    }
+    .register-section,
+    .login-section {
+        border: none;
+        min-height: 700px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    input[type="text"],
+    input[type="password"],
+    textarea {
+        width: 100%;
+        font-size: 18px;
+        padding: 8px 12px;
+        margin: 8px 0;
+        border: 1px solid black;
+        border-radius: 4px;
+    }
+    form {
+        display: inline;
+    }
+    .signin-button,
+    .signup-button {
+        width: 100%;
+        background-color: black;
+        border: none;
+        text-decoration: none;
+        color: white;
+        padding: 10px 32px;
+        border-radius: 4px;
+    }
+    [type="checkbox"] {
+        height: 15px;
+        width: 15px;
+        margin: 20px 5px 2px 2px;
+    }
+    .instructions {
+        bottom: 0;
+    }
+    .dont-have-account-container,
+    .already-registered-container {
+        margin-bottom: 17rem;
     }
 }
