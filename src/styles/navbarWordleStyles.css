@@ -165,7 +165,7 @@
     .navbar-title .for-pau {
         margin-top: 38px;
         margin-left: 6.8rem;
-        font-size: 12px;
+        font-size: 14px;
     }
     .navbar .checkbox {
         height: 30px;
@@ -197,7 +197,7 @@
 }
 
 
-/* ex: iphone 13 */
+/* ex: iphone 12 pro or 13 */
 @media (min-width: 350px) and (max-width: 399px) {
     .navbar-title .title {
         margin-top: 10px; 
@@ -206,7 +206,7 @@
     .navbar-title .for-pau {
         margin-top: 38px;
         margin-left: 6.8rem;
-        font-size: 12px;
+        font-size: 14px;
     }
     .navbar .checkbox {
         height: 30px;

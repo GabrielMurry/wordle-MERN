@@ -200,9 +200,9 @@ label,
 @media (min-width: 400px) and (max-width: 450px) {
     .signin-title,
     .register-title {
-        font-size: 25px;
-        padding-bottom: 40px;
-        margin-top: -25px;
+        font-size: 30px;
+        padding-bottom: 35px;
+        margin-top: -20px;
     }
     .register-section,
     .login-section {
@@ -233,6 +233,7 @@ label,
         color: white;
         padding: 10px 32px;
         border-radius: 4px;
+        font-size: 15px;
     }
     [type="checkbox"] {
         height: 15px;
@@ -241,6 +242,11 @@ label,
     }
     .instructions {
         bottom: 0;
+        font-size: 12px;
+    }
+    .errmsg {
+        position: absolute;
+        margin-top: -35rem;
     }
     .dont-have-account-container,
     .already-registered-container {
@@ -248,13 +254,13 @@ label,
     }
 }
 
-/* ex: iphone 13 */
+/* ex: iphone 12 pro or 13 */
 @media (min-width: 350px) and (max-width: 399px) {
     .signin-title,
     .register-title {
-        font-size: 25px;
-        padding-bottom: 40px;
-        margin-top: -25px;
+        font-size: 30px;
+        padding-bottom: 35px;
+        margin-top: -20px;
     }
     .register-section,
     .login-section {
@@ -285,6 +291,7 @@ label,
         color: white;
         padding: 10px 32px;
         border-radius: 4px;
+        font-size: 15px;
     }
     [type="checkbox"] {
         height: 15px;
@@ -293,6 +300,11 @@ label,
     }
     .instructions {
         bottom: 0;
+        font-size: 12px;
+    }
+    .errmsg {
+        position: absolute;
+        margin-top: -35rem;
     }
     .dont-have-account-container,
     .already-registered-container {

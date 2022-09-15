@@ -192,7 +192,8 @@
         /* margin-top: 58vh; */
         /* margin-top: 33rem; THIS USUALLY*/
         /* bottom: 170px; how many pixels bottom bar takes up?*/
-        bottom: 170px;
+        /* bottom: 170px; */
+        bottom: 0;
         padding: 0;
         padding-bottom: 20px;
         width: 100%;
@@ -218,7 +219,7 @@
 }
 
 
-/* ex: iphone 13 */
+/* ex: iphone 12 pro or 13 */
 @media (min-width: 350px) and (max-width: 399px) {
     .main-container {
         position: absolute;
@@ -250,7 +251,8 @@
         /* margin-top: 58vh; */
         /* margin-top: 33rem; THIS USUALLY*/
         /* bottom: 170px; how many pixels bottom bar takes up?*/
-        bottom: 120px;
+        /* bottom: 120px; */
+        bottom: 0;
         padding: 0;
         padding-bottom: 20px;
         width: 100%;
