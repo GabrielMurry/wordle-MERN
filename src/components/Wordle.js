@@ -55,12 +55,15 @@ function MainContent() {
 
   // getting new solution word
   React.useEffect(() => {
-    solutionWord = randomWord({ exactly: 1, maxLength: 5 });
-    // make sure random word is exactly 5 letters (i wish you can specify length in function)
-    while (solutionWord[0].length !== 5) {
+    if (!gameOver) {
       solutionWord = randomWord({ exactly: 1, maxLength: 5 });
+      // make sure random word is exactly 5 letters (i wish you can specify length in function)
+      while (solutionWord[0].length !== 5) {
+        solutionWord = randomWord({ exactly: 1, maxLength: 5 });
+      }
+      solutionWord = "treat";
+      solutionWord = solutionWord.toString();
     }
-    solutionWord = solutionWord.toString();
   }, [gameOver]);
 
   // for timer
@@ -71,6 +74,7 @@ function MainContent() {
         setSeconds((seconds) => seconds + 1);
       }, 1000);
     } else if (!isActive && seconds !== 0) {
+      console.log("CLEARING");
       clearInterval(interval);
     }
     return () => clearInterval(interval);
@@ -135,20 +139,20 @@ function MainContent() {
 
   const handleGameOver = (userHasWon) => {
     if (userHasWon) {
-      setSeconds(0); // resetting timer
-      setIsActive(false); // resetting timer
       setWordleWin(true);
     }
+    setSeconds(0); // resetting timer
+    setIsActive(false); // de-activating timer
     setGameOver(true);
   };
 
   const isGameOver = async (inputWord, guessRow) => {
     let user = JSON.stringify(auth?.user);
+    console.log(user);
     if (solutionWord === inputWord) {
       const time = seconds;
       const win = true;
       const loss = false;
-      handleGameOver(true);
       // update stats for user if won
       try {
         const response = await axios.put(
@@ -160,6 +164,7 @@ function MainContent() {
           }
         );
         console.log(JSON.stringify(response?.data));
+        handleGameOver(true);
       } catch (err) {
         console.error(err);
       }
@@ -167,7 +172,6 @@ function MainContent() {
       const time = seconds;
       const win = false;
       const loss = true;
-      handleGameOver(true);
       // update stats for user if lost
       try {
         const response = await axios.put(
@@ -179,6 +183,7 @@ function MainContent() {
           }
         );
         console.log(JSON.stringify(response?.data));
+        handleGameOver(false);
       } catch (err) {
         console.error(err);
       }
@@ -233,7 +238,7 @@ function MainContent() {
           solutionWord={solutionWord}
         />
       </div>
-      {gameOver && <Results playAgain={playAgain} />}
+      {gameOver && <Results playAgain={playAgain} gameOver={gameOver} />}
     </main>
   );
 }
