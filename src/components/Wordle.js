@@ -61,6 +61,7 @@ function MainContent() {
       while (solutionWord[0].length !== 5) {
         solutionWord = randomWord({ exactly: 1, maxLength: 5 });
       }
+      solutionWord = "treat";
       solutionWord = solutionWord.toString();
     }
   }, [gameOver]);
