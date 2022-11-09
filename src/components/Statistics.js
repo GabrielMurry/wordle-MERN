@@ -3,6 +3,7 @@ import BarChart from "./BarChart";
 import { Chart, registerables } from "chart.js";
 import axios from "../api/axios";
 import useAuth from "../hooks/useAuth";
+import "../styles/statsStyles.css";
 
 const Statistics = (props) => {
   Chart.register(...registerables);
@@ -32,12 +33,12 @@ const Statistics = (props) => {
               data: rowData?.map((data) => data.wins),
               backgroundColor: rowData?.map((data) =>
                 data.row === rowWon
-                  ? "rgba(255, 182, 193, 0.7"
-                  : "rgba(216, 195, 255, 0.7"
+                  ? "rgba(255, 182, 193, 0.7)"
+                  : "rgba(216, 195, 255, 0.7)"
               ),
               borderColor: "black",
               borderWidth: "1.5",
-              barThickness: 59,
+              barThickness: 61.9,
             },
           ],
         });
