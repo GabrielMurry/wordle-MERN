@@ -233,7 +233,7 @@
         margin-left: 6.8rem;
         font-size: 14px;
     }
-    .navbar .checkbox {
+    .navbar .checkbox-menu {
         height: 30px;
         width: 30px;
         top: 0px;
@@ -257,7 +257,25 @@
         z-index: 2;
         transform: translate(-110%);
     }
-    .navbar input[type="checkbox"]:checked ~ .menu-items {
+    .navbar .menu input[type="checkbox"]:checked ~ .menu-items {
+        z-index: 2;
+    }
+
+    .navbar .checkbox-stats {
+        height: 30px;
+        width: 30px;
+        top: 0px;
+        left: 365px;
+    }
+    .navbar .stats-bar-lines .line {
+        height: 3px;
+    }
+    .navbar .stats-bar-lines {
+        height: 22px;
+        top: 20px;
+        right: 15px;
+    }
+    .navbar .stats input[type="checkbox"]:checked ~ .menu-items {
         z-index: 2;
     }
 }
@@ -266,15 +284,15 @@
 /* ex: iphone 12 pro or 13 */
 @media (min-width: 350px) and (max-width: 399px) {
     .navbar-title .title {
-        margin-top: 12px; 
-        font-size: 28px; 
+        margin-top: 10px; 
+        font-size: 30px; 
     }
     .navbar-title .for-pau {
         margin-top: 38px;
         margin-left: 6.8rem;
         font-size: 14px;
     }
-    .navbar .checkbox {
+    .navbar .checkbox-menu {
         height: 30px;
         width: 30px;
         top: 0px;
@@ -284,8 +302,8 @@
         height: 3px;
     }
     .navbar .hamburger-lines {
-        height: 20px;
-        width: 26px;
+        height: 22px;
+        width: 28px;
         top: 20px;
         left: 15px;
     }
@@ -298,7 +316,25 @@
         z-index: 2;
         transform: translate(-110%);
     }
-    .navbar input[type="checkbox"]:checked ~ .menu-items {
+    .navbar .menu input[type="checkbox"]:checked ~ .menu-items {
+        z-index: 2;
+    }
+
+    .navbar .checkbox-stats {
+        height: 30px;
+        width: 30px;
+        top: 0px;
+        left: 340px;
+    }
+    .navbar .stats-bar-lines .line {
+        height: 3px;
+    }
+    .navbar .stats-bar-lines {
+        height: 22px;
+        top: 20px;
+        right: 15px;
+    }
+    .navbar .stats input[type="checkbox"]:checked ~ .menu-items {
         z-index: 2;
     }
 }

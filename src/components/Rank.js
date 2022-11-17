@@ -122,12 +122,12 @@ const Rank = () => {
             <div className="total-wins-num">{totalWins}</div>
           </div>
           <div className="longest-win-streak-container">
-            <h3 className="longest-win-streak">Longest Win Streak</h3>
+            <h3 className="longest-win-streak">Win Streak</h3>
             <div className="longest-win-streak-user">{winStreakUsers}</div>
             <div className="longest-win-streak-num">{winStreak}</div>
           </div>
           <div className="fastest-time-container">
-            <h3 className="fastest-time">Fastest Time-to-Win</h3>
+            <h3 className="fastest-time">Time-to-Win</h3>
             <div className="fastest-time-user">{fastestWinUsers}</div>
             <div className="fastest-time-num">{fastestWin}</div>
           </div>

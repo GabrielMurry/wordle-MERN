@@ -157,3 +157,128 @@
     padding: 5px 15px;
     border-radius: 10px;
 }
+
+
+/* ex: iphone XR */
+@media (min-width: 400px) and (max-width: 450px) {
+    .main-container, .game-section {
+        width: 100vw;
+        height: 100vh;
+    }
+    .win-or-lose-display {
+        z-index: 5;
+        margin-top: 17.1rem;
+    }
+    .grid-container {
+        z-index: 1;
+        margin-top: 5rem;
+        padding: 10px;
+        gap: 5px;
+    }
+    .word-does-not-exist-display, 
+    .solution-display {
+        margin-top: 31.6rem;
+        padding: 8px;
+        font-size: 12px;
+        border-radius: 8px;
+    }
+    .keyboard-container {
+        /* margin-top: 58vh; */
+        /* margin-top: 33rem; THIS USUALLY*/
+        /* bottom: 170px; how many pixels bottom bar takes up?*/
+        /* bottom: 170px; */
+        bottom: 65px;
+        padding: 0;
+        padding-bottom: 20px;
+        width: 100%;
+        gap: 5px;
+    }
+    .key-individual { 
+        height: 50px;
+        width: 36px;
+    }
+    .key-individual:nth-child(20),
+    .key-individual:nth-child(28) {
+        width: 56px;
+    }
+    .play-again-button {
+        margin-top: 37.4rem;
+        padding: 14px 31px;
+        font-size: 18px;
+    }
+    .play-again-enter-key {
+        visibility: hidden;
+        margin-top: 41rem;
+    }
+    .barchart-row-container {
+        height: 453px;
+        width: 343px;
+        margin-left: 0rem;
+        margin-bottom: 11.1rem;
+    }
+}
+
+
+/* ex: iphone 12 pro or 13 */
+@media (min-width: 350px) and (max-width: 399px) {
+    .main-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .main-container, .game-section {
+        width: 100vw;
+        height: 100vh;
+    }
+    .win-or-lose-display {
+        z-index: 5;
+        margin-top: 17.1rem;
+    }
+    .grid-container {
+        z-index: 1;
+        margin-top: 5rem;
+        padding: 10px;
+        gap: 5px;
+    }
+    .word-does-not-exist-display, 
+    .solution-display {
+        margin-top: 31.6rem;
+        padding: 8px;
+        font-size: 12px;
+        border-radius: 8px;
+    }
+    .keyboard-container {
+        /* margin-top: 58vh; */
+        /* margin-top: 33rem; THIS USUALLY*/
+        /* bottom: 170px; how many pixels bottom bar takes up?*/
+        /* bottom: 120px; */
+        bottom: 13px;
+        padding: 0;
+        padding-bottom: 20px;
+        width: 100%;
+        gap: 4px;
+    }
+    .key-individual { 
+        height: 50px;
+        width: 34px;
+    }
+    .key-individual:nth-child(20),
+    .key-individual:nth-child(28) {
+        width: 53px;
+    }
+    .play-again-button {
+        margin-top: 37.4rem;
+        padding: 14px 31px;
+        font-size: 18px;
+    }
+    .play-again-enter-key {
+        visibility: hidden;
+        margin-top: 41rem;
+    }
+    .barchart-row-container {
+        height: 432px;
+        width: 343px;
+        margin-left: 0.9rem;
+        margin-bottom: 9.1rem;
+    }
+}
