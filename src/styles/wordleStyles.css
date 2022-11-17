@@ -232,13 +232,18 @@
     }
     .win-or-lose-display {
         z-index: 5;
-        margin-top: 17.1rem;
+        margin-top: 16.6rem;
     }
     .grid-container {
         z-index: 1;
         margin-top: 5rem;
         padding: 10px;
         gap: 5px;
+    }
+    .flip-box {
+        position: relative;
+        width: 60px;
+        height: 60px;
     }
     .word-does-not-exist-display, 
     .solution-display {
@@ -252,7 +257,7 @@
         /* margin-top: 33rem; THIS USUALLY*/
         /* bottom: 170px; how many pixels bottom bar takes up?*/
         /* bottom: 120px; */
-        bottom: 13px;
+        bottom: 63px;
         padding: 0;
         padding-bottom: 20px;
         width: 100%;
@@ -267,9 +272,9 @@
         width: 53px;
     }
     .play-again-button {
-        margin-top: 37.4rem;
+        margin-top: 34.5rem;
         padding: 14px 31px;
-        font-size: 18px;
+        font-size: 16px;
     }
     .play-again-enter-key {
         visibility: hidden;

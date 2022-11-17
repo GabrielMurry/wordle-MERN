@@ -191,20 +191,19 @@
     .total-wins {
         font-size: 18px;
     }
-    
     .total-wins-user {
         font-size: 14px;
     }
-    
     .total-wins-user div {
+        display: flex;
+        align-items: center;
         width: 85%;
         height: 55%;
     }
-    
     .total-wins-num {
         font-size: 14px;
+        margin-top: -2px;
     }
-    
     .total-wins-num div {
         margin-left: 80px;
         height: 55%;
@@ -213,42 +212,40 @@
     .longest-win-streak {
         font-size: 18px;
     }
-
     .longest-win-streak-user {
         font-size: 14px;
     }
-    
     .longest-win-streak-user div {
+        display: flex;
+        align-items: center;
         width: 85%;
         height: 55%;
     }
-    
     .longest-win-streak-num {
         font-size: 14px;
+        margin-top: -2px;
     }
-    
     .longest-win-streak-num div {
         margin-left: 80px;
         height: 55%;
     }
-    
+
     .fastest-time {
         font-size: 18px;
     }
-
     .fastest-time-user {
         font-size: 14px;
     }
-    
     .fastest-time-user div {
+        display: flex;
+        align-items: center;
         width: 85%;
         height: 55%;
     }
-    
     .fastest-time-num {
         font-size: 14px;
+        margin-top: -2px;
     }
-    
     .fastest-time-num div {
         margin-left: 80px;
         height: 55%;
@@ -272,20 +269,19 @@
     .total-wins {
         font-size: 17px;
     }
-    
     .total-wins-user {
         font-size: 14px;
     }
-    
     .total-wins-user div {
+        display: flex;
+        align-items: center;
         width: 85%;
         height: 55%;
     }
-    
     .total-wins-num {
         font-size: 14px;
+        margin-top: -2px;
     }
-    
     .total-wins-num div {
         margin-left: 78px;
         height: 55%;
@@ -294,20 +290,19 @@
     .longest-win-streak {
         font-size: 17px;
     }
-
     .longest-win-streak-user {
         font-size: 14px;
     }
-    
     .longest-win-streak-user div {
+        display: flex;
+        align-items: center;
         width: 85%;
         height: 55%;
     }
-    
     .longest-win-streak-num {
         font-size: 14px;
+        margin-top: -2px;
     }
-    
     .longest-win-streak-num div {
         margin-left: 78px;
         height: 55%;
@@ -316,20 +311,19 @@
     .fastest-time {
         font-size: 17px;
     }
-    
     .fastest-time-user {
         font-size: 14px;
     }
-    
     .fastest-time-user div {
+        display: flex;
+        align-items: center;
         width: 85%;
         height: 55%;
     }
-    
     .fastest-time-num {
         font-size: 14px;
+        margin-top: -2px;
     }
-    
     .fastest-time-num div {
         margin-left: 78px;
         height: 55%;
