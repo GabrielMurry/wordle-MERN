@@ -161,8 +161,10 @@
 
 /* ex: iphone XR */
 @media (min-width: 400px) and (max-width: 450px) {
-    body {
-        padding-bottom: env(safe-area-inset-bottom);
+    @supports(padding: max(0px)) {
+        .post {
+            padding: max(12px, env(safe-area-inset-bottom));
+        }
     }
     .main-container, .game-section {
         width: 100vw;
