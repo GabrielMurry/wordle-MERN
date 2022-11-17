@@ -161,6 +161,9 @@
 
 /* ex: iphone XR */
 @media (min-width: 400px) and (max-width: 450px) {
+    body {
+        padding-bottom: env(safe-area-inset-bottom);
+    }
     .main-container, .game-section {
         width: 100vw;
         height: 100vh;
@@ -187,9 +190,9 @@
         /* margin-top: 33rem; THIS USUALLY*/
         /* bottom: 170px; how many pixels bottom bar takes up?*/
         /* bottom: 170px; */
-        bottom: 65px;
+        /* bottom: 65px; */
         padding: 0;
-        padding-bottom: 20px;
+        /* padding-bottom: 20px; */
         width: 100%;
         gap: 5px;
     }
@@ -221,6 +224,9 @@
 
 /* ex: iphone 12 pro or 13 */
 @media (min-width: 350px) and (max-width: 399px) {
+    body {
+        padding-bottom: env(safe-area-inset-bottom);
+    }
     .main-container {
         position: absolute;
         top: 0;
