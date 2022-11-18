@@ -193,6 +193,11 @@ const Grid = React.forwardRef((props, ref) => {
           compareToSolution(word);
         } else {
           props.setWordExists(false);
+          // display "word does not exist" for only 2 seconds
+          const timer = setTimeout(() => {
+            props.setWordExists(true);
+          }, 2000);
+          return () => clearTimeout(timer);
         }
       }
     },

@@ -175,26 +175,25 @@
         padding: 10px;
         gap: 5px;
     }
-    .word-does-not-exist-display, 
-    .solution-display {
-        margin-top: 31.6rem;
+    .word-does-not-exist-display {
+        z-index: 5;
+        margin-top: 17.3rem;
         padding: 8px;
         font-size: 12px;
         border-radius: 8px;
     }
+    .solution-display {
+        z-index: 5;
+        margin-top: 27.3rem;
+    }
     .keyboard-container {
-        /* margin-top: 58vh; */
-        /* margin-top: 33rem; THIS USUALLY*/
-        /* bottom: 170px; how many pixels bottom bar takes up?*/
-        /* bottom: 170px; */
-        /* bottom: 65px; */
-        padding: 0;
-        /* padding-bottom: 20px; */
         width: 100%;
         gap: 5px;
+        padding: 0;
+        bottom: 100px;
     }
     .key-individual { 
-        height: 50px;
+        height: 55px;
         width: 36px;
     }
     .key-individual:nth-child(20),
@@ -221,11 +220,6 @@
 
 /* ex: iphone 12 pro or 13 */
 @media (min-width: 350px) and (max-width: 399px) {
-    .main-container {
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
     .main-container, .game-section {
         width: 100vw;
         height: 100vh;
@@ -245,26 +239,25 @@
         width: 60px;
         height: 60px;
     }
-    .word-does-not-exist-display, 
-    .solution-display {
-        margin-top: 31.6rem;
+    .word-does-not-exist-display {
+        z-index: 5;
+        margin-top: 16.8rem;
         padding: 8px;
         font-size: 12px;
         border-radius: 8px;
     }
+    .solution-display {
+        z-index: 5;
+        margin-top: 25.3rem;
+    }
     .keyboard-container {
-        /* margin-top: 58vh; */
-        /* margin-top: 33rem; THIS USUALLY*/
-        /* bottom: 170px; how many pixels bottom bar takes up?*/
-        /* bottom: 120px; */
-        bottom: 63px;
-        padding: 0;
-        padding-bottom: 20px;
         width: 100%;
         gap: 4px;
+        padding: 0;
+        bottom: 100px;
     }
     .key-individual { 
-        height: 50px;
+        height: 52px;
         width: 34px;
     }
     .key-individual:nth-child(20),
@@ -288,56 +281,3 @@
     }
 }
 
-
-
-
-@supports (padding-top: constant(safe-area-inset-top)) {
-    body {
-      padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
-    }
-  }
-  
-  @media (display-mode: fullscreen) {
-    body {
-      padding: 0;
-    }
-  }
-  
-  @media (display-mode: standalone) {
-    body {
-      padding: 0;
-    }
-  }
-  
-  /* Older browsers (which don't support CSS variables) */
-  body {
-    height: 100%;
-  }
-  
-  /* Browsers which partially support CSS variables (iOS 11.0 – 11.2) */
-  @supports (padding-top: constant(safe-area-inset-top)) {
-    body {
-      --safe-area-inset-top: constant(safe-area-inset-top);
-      height: calc(100% + var(--safe-area-inset-top));
-    }
-  }
-  /* Adapted from https://medium.com/@draganeror/iphone-x-layout-features-with-css-environment-variables-d57423433dec */
-  /* Browsers which fully support CSS variables (iOS 11.2+). */
-  @supports (padding-top: env(safe-area-inset-top)) {
-    body {
-      --safe-area-inset-top: env(safe-area-inset-top);
-      height: calc(100% + var(--safe-area-inset-top));
-    }
-  }
-  
-  @media (display-mode: fullscreen) {
-    body {
-      height: 100%;
-    }
-  }
-  
-  @media (display-mode: standalone) {
-    body {
-      height: 100%;
-    }
-  }
