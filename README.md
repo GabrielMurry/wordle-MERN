@@ -1,6 +1,9 @@
-# Getting Started with Create React App
+# Wordle Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created with the MERN stack (MongoDb, Express.js, React.js, and Node.js). Utilizes JWT and bcrypt for secure authentication and password handling. 
+
+Check it out!
+https://wordle-mern.onrender.com
 
 ## Available Scripts
 
