@@ -40,7 +40,7 @@ const Navbar = () => {
             </li>
             <li>
               {/* sign out usually a button but it wasn't formatting correctly as list item */}
-              <a href="" onClick={signOut} className="signout">
+              <a href="/" onClick={signOut} className="signout">
                 Sign Out
               </a>
             </li>
