@@ -56,11 +56,6 @@
     cursor: pointer;
 }
 
-.navbar-container .signout {
-    border: none;
-    background-color: white;
-}
-
 .navbar-container .navbar .home:hover, .login:hover, .register:hover, .signout:hover {
     font-weight: normal;
 }

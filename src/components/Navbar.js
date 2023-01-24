@@ -40,9 +40,9 @@ const Navbar = () => {
             </li>
             <li>
               {/* sign out usually a button but it wasn't formatting correctly as list item */}
-              <button onClick={signOut} className="signout">
+              <a href="" onClick={signOut} className="signout">
                 Sign Out
-              </button>
+              </a>
             </li>
           </div>
         </div>
