@@ -4,7 +4,7 @@ import Confetti from "react-confetti";
 function PopupDisplays(props) {
   return (
     <div className="popup-container">
-      {props.wordleWin && <Confetti className="confetti" />}
+      {/* {props.wordleWin && <Confetti className="confetti" />} */}
       {props.gameOver && (
         <h2 className="win-or-lose-display">
           {props.wordleWin ? "You win!" : "You lose"}

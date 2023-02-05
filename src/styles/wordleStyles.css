@@ -1,216 +1,285 @@
 * {
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-.main-container, .game-section {
-    display: flex;
-    justify-content: center;
-    /* wnat it to be size of viewport so confetti covers entire screen */
-    height: 100vh;
-    width: 100vw;
+.main-container,
+.game-section {
+  display: flex;
+  justify-content: center;
+  /* wnat it to be size of viewport so confetti covers entire screen */
+  height: 100vh;
+  width: 100vw;
 }
 
 .grid-container {
-    position: absolute;
-    margin-top: 8rem;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    padding: 10px;
-    gap: 5px;
+  position: absolute;
+  margin-top: 8rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 10px;
+  gap: 5px;
 }
 
 .flip-box {
-    position: relative;
-    width: 63px;
-    height: 63px;
-    /* this is time it takes to flip one tile. */
-    /* If we wnat to change time it takes to move to the next tile --> Grid.js --> flipTile function --> setTimeout() */
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
+  position: relative;
+  width: 63px;
+  height: 63px;
+  /* this is time it takes to flip one tile. */
+  /* If we wnat to change time it takes to move to the next tile --> Grid.js --> flipTile function --> setTimeout() */
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
 }
 @keyframes box-jump-on-input {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
-.flip-box-front, .flip-box-back {
-    position: absolute;
-    width: 100%;
-    height: 100%; 
-    display: grid;
-    justify-content: center;  
-    align-items: center; 
-    font-weight: bold;
-    font-size: 32px;  
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+.flip-box-front,
+.flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 32px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .popup-container {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
 }
 
 .win-or-lose-display {
-    position: absolute;
-    margin-top: 5rem;
-    background-color: black;
-    color: white;
-    padding: 8px;
-    font-size: 15px;
-    border-radius: 10px;
+  position: absolute;
+  margin-top: 5rem;
+  background-color: black;
+  color: white;
+  padding: 8px;
+  font-size: 15px;
+  border-radius: 10px;
 }
 
-.word-does-not-exist-display, 
+.word-does-not-exist-display,
 .solution-display {
-    position: absolute;
-    margin-top: 35.4rem;
-    background-color: black;
-    color: white;
-    padding: 8px;
-    font-size: 15px;
-    border-radius: 10px;
+  position: absolute;
+  margin-top: 35.4rem;
+  background-color: black;
+  color: white;
+  padding: 8px;
+  font-size: 15px;
+  border-radius: 10px;
 }
 
 .keyboard-container {
-    position: absolute;
-    z-index: 1;
-    /* bottom: 0; */
-    margin-top: 38.5rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 10px;
-    width: 560px;
-    gap: 8px;
+  position: absolute;
+  z-index: 1;
+  /* bottom: 0; */
+  margin-top: 38.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+  width: 560px;
+  gap: 8px;
 }
 
 .key-individual {
-    display: grid;           
-    justify-content: center;   
-    align-items: center;   
-    height: 60px;
-    width: 45px;
-    border-radius: 5px;
-    border: none;
-    text-decoration: none;
-    cursor: pointer;
-    font-weight: bold;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 45px;
+  border-radius: 5px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .key-individual:nth-child(20),
 .key-individual:nth-child(28) {
-    width: 75px;
+  width: 75px;
 }
 
 .results-container {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    width: 50vw;
-    opacity: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 50vw;
+  opacity: 0;
 }
-@keyframes fadeIn { /* styled in Results.js */
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+@keyframes fadeIn {
+  /* styled in Results.js */
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .play-again-button {
-    position: absolute;
-    z-index: 2;
-    margin-top: 42rem;
-    background-color: rgb(255, 165, 178);
-    color: white;
-    text-decoration: none;
-    border: none;
-    padding: 15px 32px;
-    font-size: 20px;
-    border-radius: 10px;
-    cursor: pointer;
+  position: absolute;
+  z-index: 2;
+  margin-top: 42rem;
+  background-color: rgb(255, 165, 178);
+  color: white;
+  text-decoration: none;
+  border: none;
+  padding: 15px 32px;
+  font-size: 20px;
+  border-radius: 10px;
+  cursor: pointer;
 }
 .play-again-button:hover {
-    background-color: rgb(249, 134, 153);
+  background-color: rgb(249, 134, 153);
 }
 
 .play-again-enter-key {
-    position: absolute;
-    z-index: 2;
-    margin-top: 46rem;
-    background-color: rgb(255, 165, 178);
-    color: white;
-    padding: 5px 15px;
-    border-radius: 10px;
+  position: absolute;
+  z-index: 2;
+  margin-top: 46rem;
+  background-color: rgb(255, 165, 178);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 10px;
 }
 
+/* ex: iphone XR */
+@media (min-width: 400px) and (max-width: 450px) {
+  .main-container,
+  .game-section {
+    width: 100vw;
+    height: 100vh;
+  }
+  .win-or-lose-display {
+    z-index: 5;
+    margin-top: 17.1rem;
+  }
+  .grid-container {
+    z-index: 1;
+    margin-top: 5rem;
+    padding: 10px;
+    gap: 5px;
+  }
+  .word-does-not-exist-display {
+    z-index: 5;
+    margin-top: 17.3rem;
+    padding: 8px;
+    font-size: 12px;
+    border-radius: 8px;
+  }
+  .solution-display {
+    z-index: 5;
+    margin-top: 27.3rem;
+  }
+  .keyboard-container {
+    width: 100%;
+    gap: 5px;
+    padding: 0;
+    bottom: 100px;
+  }
+  .key-individual {
+    height: 55px;
+    width: 36px;
+  }
+  .key-individual:nth-child(20),
+  .key-individual:nth-child(28) {
+    width: 56px;
+  }
+  .play-again-button {
+    margin-top: 37.4rem;
+    padding: 14px 31px;
+    font-size: 18px;
+  }
+  .play-again-enter-key {
+    visibility: hidden;
+    margin-top: 41rem;
+  }
+  .barchart-row-container {
+    height: 453px;
+    width: 343px;
+    margin-left: 0rem;
+    margin-bottom: 11.1rem;
+  }
+}
 
-
-@media only screen and (device-width: 414px) and (device-height: 726px) {
-    .main-container {
-        position: absolute;
-        top: 0;
-    }
-    .main-container, .game-section {
-        width: 96vw;
-        height: 100vh;
-    }
-    .win-or-lose-display {
-        z-index: 5;
-        margin-top: 17.1rem;
-    }
-    .grid-container {
-        z-index: 1;
-        margin-top: 5rem;
-        padding: 10px;
-        gap: 5px;
-    }
-    .word-does-not-exist-display, 
-    .solution-display {
-        margin-top: 31.6rem;
-        padding: 8px;
-        font-size: 12px;
-        border-radius: 8px;
-    }
-    .keyboard-container {
-        /* margin-top: 58vh; */
-        /* margin-top: 33rem; THIS USUALLY*/
-        /* bottom: 170px; how many pixels bottom bar takes up?*/
-        bottom: 0;
-        padding: 0;
-        padding-bottom: 20px;
-        width: 100%;
-        gap: 5px;
-    }
-    .key-individual { 
-        height: 50px;
-        width: 35px;
-    }
-    .key-individual:nth-child(20),
-    .key-individual:nth-child(28) {
-        width: 55px;
-    }
-    .play-again-button {
-        margin-top: 37.4rem;
-        padding: 14px 31px;
-        font-size: 18px;
-    }
-    .play-again-enter-key {
-        visibility: hidden;
-        margin-top: 41rem;
-    }
+/* ex: iphone 12 pro or 13 */
+@media (min-width: 350px) and (max-width: 399px) {
+  .main-container,
+  .game-section {
+    width: 100vw;
+    height: 100vh;
+  }
+  .win-or-lose-display {
+    z-index: 5;
+    margin-top: 16.6rem;
+  }
+  .grid-container {
+    z-index: 1;
+    margin-top: 5rem;
+    padding: 10px;
+    gap: 5px;
+  }
+  .flip-box {
+    position: relative;
+    width: 60px;
+    height: 60px;
+  }
+  .word-does-not-exist-display {
+    z-index: 5;
+    margin-top: 16.8rem;
+    padding: 8px;
+    font-size: 12px;
+    border-radius: 8px;
+  }
+  .solution-display {
+    z-index: 5;
+    margin-top: 25.3rem;
+  }
+  .keyboard-container {
+    width: 100%;
+    gap: 4px;
+    padding: 0;
+    bottom: 100px;
+  }
+  .key-individual {
+    height: 52px;
+    width: 34px;
+  }
+  .key-individual:nth-child(20),
+  .key-individual:nth-child(28) {
+    width: 53px;
+  }
+  .play-again-button {
+    margin-top: 34.5rem;
+    padding: 14px 31px;
+    font-size: 16px;
+  }
+  .play-again-enter-key {
+    visibility: hidden;
+    margin-top: 41rem;
+  }
+  .barchart-row-container {
+    height: 432px;
+    width: 343px;
+    margin-left: 0.9rem;
+    margin-bottom: 9.1rem;
+  }
 }

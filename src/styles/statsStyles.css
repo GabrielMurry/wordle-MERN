@@ -1,0 +1,52 @@
+.statistics-container {
+  display: flex;
+  justify-content: center;
+}
+
+.barchart-row-container {
+  position: absolute;
+  height: 450px;
+  width: 343px;
+  margin-right: 0.5rem;
+  margin-top: 6.35rem;
+}
+
+.win-stats-container {
+  position: absolute;
+  margin-left: 500px;
+}
+
+/* ex: iphone XR */
+@media (min-width: 400px) and (max-width: 450px) {
+  .main-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .main-container,
+  .game-section {
+    width: 100vw;
+    height: 100vh;
+  }
+  .barchart-row-container {
+    margin-top: 3.28rem;
+  }
+}
+
+/* ex: iphone 12 pro or 13 */
+@media (min-width: 350px) and (max-width: 399px) {
+  .main-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .main-container,
+  .game-section {
+    width: 100vw;
+    height: 100vh;
+  }
+  .barchart-row-container {
+    margin-right: 1.4rem;
+    margin-top: 3.5rem;
+  }
+}

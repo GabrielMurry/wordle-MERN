@@ -1,0 +1,342 @@
+.rank-container {
+  display: flex;
+  justify-content: center;
+}
+.rank {
+  display: flex;
+  justify-content: center;
+  width: 720px;
+  height: calc(100vh - 90px);
+  margin-top: 60px;
+  z-index: 2;
+}
+
+.rank-title {
+  position: absolute;
+  border-bottom: 1px solid black;
+}
+
+.rank-categories {
+  width: 100%;
+}
+
+.rank-categories div {
+  float: left;
+  width: 33.33%;
+  height: 100%;
+  /* background-color: red; */
+}
+
+.total-wins-container {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(254, 154, 169);
+  border-radius: 10px;
+  /* border: 1px solid black; */
+}
+
+.total-wins {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  color: black;
+}
+
+.total-wins-user {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.total-wins-user div {
+  margin-top: 5px;
+  margin-left: 10px;
+  padding: 10px;
+  width: 210px;
+  height: 55%;
+  background-color: rgb(255, 198, 207);
+  border-radius: 5px;
+  border-bottom: 1px solid red;
+}
+
+.total-wins-num div {
+  position: relative;
+  display: grid;
+  justify-content: flex-end;
+  margin-top: 5px;
+  margin-left: 12rem;
+  padding: 10px;
+  width: 20px;
+  height: 33px;
+}
+
+.longest-win-streak-container {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 165, 178);
+  border-radius: 10px;
+  /* border: 1px solid black; */
+}
+
+.longest-win-streak {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  color: black;
+}
+
+.longest-win-streak-user {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.longest-win-streak-user div {
+  margin-top: 5px;
+  margin-left: 10px;
+  padding: 10px;
+  width: 210px;
+  height: 55%;
+  background-color: rgb(255, 198, 207);
+  border-radius: 5px;
+  border-bottom: 1px solid red;
+}
+
+.longest-win-streak-num div {
+  position: relative;
+  display: grid;
+  justify-content: flex-end;
+  margin-top: 5px;
+  margin-left: 12rem;
+  padding: 10px;
+  width: 20px;
+  height: 33px;
+}
+
+.fastest-time-container {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(251, 177, 188);
+  border-radius: 10px;
+  /* border: 1px solid black; */
+}
+
+.fastest-time {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  color: black;
+}
+
+.fastest-time-user {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.fastest-time-user div {
+  margin-top: 5px;
+  margin-left: 10px;
+  padding: 10px;
+  width: 210px;
+  height: 55%;
+  background-color: rgb(255, 198, 207);
+  border-radius: 5px;
+  border-bottom: 1px solid red;
+}
+
+.fastest-time-num div {
+  position: relative;
+  display: grid;
+  justify-content: flex-end;
+  margin-top: 5px;
+  margin-left: 12rem;
+  padding: 10px;
+  width: 20px;
+  height: 33px;
+}
+
+/* responsiveness: leader board gets narrower between this screen size */
+@media (max-width: 750px) and (min-width: 450px) {
+  .rank {
+    width: 500px;
+  }
+
+  .total-wins-user div {
+    width: 145px;
+  }
+
+  .total-wins-num div {
+    margin-left: 8rem;
+  }
+
+  .longest-win-streak-user div {
+    width: 145px;
+  }
+
+  .longest-win-streak-num div {
+    margin-left: 8rem;
+  }
+
+  .fastest-time-user div {
+    width: 145px;
+  }
+
+  .fastest-time-num div {
+    margin-left: 8rem;
+  }
+}
+
+/* ex: iphone XR */
+@media (min-width: 400px) and (max-width: 450px) {
+  .rank-title {
+    margin-top: 25px;
+    font-size: 20px;
+  }
+
+  .rank-categories div {
+    float: left;
+    width: 33.33%;
+    height: 100%;
+  }
+
+  .total-wins {
+    font-size: 18px;
+  }
+  .total-wins-user {
+    font-size: 14px;
+  }
+  .total-wins-user div {
+    display: flex;
+    align-items: center;
+    width: 85%;
+    height: 55%;
+  }
+  .total-wins-num {
+    font-size: 14px;
+    margin-top: -2px;
+  }
+  .total-wins-num div {
+    margin-left: 80px;
+    height: 55%;
+  }
+
+  .longest-win-streak {
+    font-size: 18px;
+  }
+  .longest-win-streak-user {
+    font-size: 14px;
+  }
+  .longest-win-streak-user div {
+    display: flex;
+    align-items: center;
+    width: 85%;
+    height: 55%;
+  }
+  .longest-win-streak-num {
+    font-size: 14px;
+    margin-top: -2px;
+  }
+  .longest-win-streak-num div {
+    margin-left: 80px;
+    height: 55%;
+  }
+
+  .fastest-time {
+    font-size: 18px;
+  }
+  .fastest-time-user {
+    font-size: 14px;
+  }
+  .fastest-time-user div {
+    display: flex;
+    align-items: center;
+    width: 85%;
+    height: 55%;
+  }
+  .fastest-time-num {
+    font-size: 14px;
+    margin-top: -2px;
+  }
+  .fastest-time-num div {
+    margin-left: 80px;
+    height: 55%;
+  }
+}
+
+/* ex: iphone 12 pro or 13 */
+@media (min-width: 350px) and (max-width: 399px) {
+  .rank-title {
+    margin-top: 25px;
+    font-size: 19px;
+  }
+
+  .rank-categories div {
+    float: left;
+    width: 33.33%;
+    height: 100%;
+  }
+
+  .total-wins {
+    font-size: 17px;
+  }
+  .total-wins-user {
+    font-size: 14px;
+  }
+  .total-wins-user div {
+    display: flex;
+    align-items: center;
+    width: 85%;
+    height: 55%;
+  }
+  .total-wins-num {
+    font-size: 14px;
+    margin-top: -2px;
+  }
+  .total-wins-num div {
+    margin-left: 78px;
+    height: 55%;
+  }
+
+  .longest-win-streak {
+    font-size: 17px;
+  }
+  .longest-win-streak-user {
+    font-size: 14px;
+  }
+  .longest-win-streak-user div {
+    display: flex;
+    align-items: center;
+    width: 85%;
+    height: 55%;
+  }
+  .longest-win-streak-num {
+    font-size: 14px;
+    margin-top: -2px;
+  }
+  .longest-win-streak-num div {
+    margin-left: 78px;
+    height: 55%;
+  }
+
+  .fastest-time {
+    font-size: 17px;
+  }
+  .fastest-time-user {
+    font-size: 14px;
+  }
+  .fastest-time-user div {
+    display: flex;
+    align-items: center;
+    width: 85%;
+    height: 55%;
+  }
+  .fastest-time-num {
+    font-size: 14px;
+    margin-top: -2px;
+  }
+  .fastest-time-num div {
+    margin-left: 78px;
+    height: 55%;
+  }
+}
