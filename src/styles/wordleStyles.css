@@ -138,7 +138,7 @@
   position: absolute;
   z-index: 2;
   margin-top: 42rem;
-  background-color: rgb(255, 165, 178);
+  background-color: rgb(255, 155, 170);
   color: white;
   text-decoration: none;
   border: none;
@@ -229,11 +229,11 @@
   }
   .win-or-lose-display {
     z-index: 5;
-    margin-top: 16.6rem;
+    margin-top: 16rem;
   }
   .grid-container {
     z-index: 1;
-    margin-top: 5rem;
+    margin-top: 4.5rem;
     padding: 10px;
     gap: 5px;
   }
@@ -244,20 +244,20 @@
   }
   .word-does-not-exist-display {
     z-index: 5;
-    margin-top: 16.8rem;
+    margin-top: 16.2rem;
     padding: 8px;
     font-size: 12px;
     border-radius: 8px;
   }
   .solution-display {
     z-index: 5;
-    margin-top: 25.3rem;
+    margin-top: 24.1rem;
   }
   .keyboard-container {
     width: 100%;
     gap: 4px;
     padding: 0;
-    bottom: 100px;
+    bottom: 90px;
   }
   .key-individual {
     height: 52px;
@@ -268,9 +268,10 @@
     width: 53px;
   }
   .play-again-button {
-    margin-top: 34.5rem;
-    padding: 14px 31px;
+    margin-top: 34rem;
+    padding: 15px 31px;
     font-size: 16px;
+    font-weight: bold;
   }
   .play-again-enter-key {
     visibility: hidden;

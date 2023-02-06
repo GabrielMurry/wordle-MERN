@@ -24,7 +24,6 @@
   float: left;
   width: 33.33%;
   height: 100%;
-  /* background-color: red; */
 }
 
 .total-wins-container {
@@ -32,42 +31,33 @@
   height: 100%;
   background-color: rgb(254, 154, 169);
   border-radius: 10px;
-  /* border: 1px solid black; */
 }
 
-.total-wins {
+.total-wins-title {
   margin-top: 70px;
   display: flex;
   justify-content: center;
   color: black;
 }
 
-.total-wins-user {
-  position: absolute;
+.total-wins-user-cards div {
   display: flex;
   flex-direction: column;
-}
-
-.total-wins-user div {
-  margin-top: 5px;
-  margin-left: 10px;
-  padding: 10px;
   width: 210px;
-  height: 55%;
+  height: 33px;
+  margin-top: 5px;
+  margin-left: 15px;
+  padding: 10px;
   background-color: rgb(255, 198, 207);
   border-radius: 5px;
   border-bottom: 1px solid red;
 }
 
-.total-wins-num div {
-  position: relative;
-  display: grid;
+.total-wins-num {
+  position: absolute;
+  display: flex;
   justify-content: flex-end;
-  margin-top: 5px;
-  margin-left: 12rem;
-  padding: 10px;
-  width: 20px;
-  height: 33px;
+  width: 190px;
 }
 
 .longest-win-streak-container {
@@ -75,42 +65,33 @@
   height: 100%;
   background-color: rgb(255, 165, 178);
   border-radius: 10px;
-  /* border: 1px solid black; */
 }
 
-.longest-win-streak {
+.longest-win-streak-title {
   margin-top: 70px;
   display: flex;
   justify-content: center;
   color: black;
 }
 
-.longest-win-streak-user {
-  position: absolute;
+.longest-win-streak-user-cards div {
   display: flex;
   flex-direction: column;
-}
-
-.longest-win-streak-user div {
-  margin-top: 5px;
-  margin-left: 10px;
-  padding: 10px;
   width: 210px;
-  height: 55%;
+  height: 33px;
+  margin-top: 5px;
+  margin-left: 15px;
+  padding: 10px;
   background-color: rgb(255, 198, 207);
   border-radius: 5px;
   border-bottom: 1px solid red;
 }
 
-.longest-win-streak-num div {
-  position: relative;
-  display: grid;
+.longest-win-streak-num {
+  position: absolute;
+  display: flex;
   justify-content: flex-end;
-  margin-top: 5px;
-  margin-left: 12rem;
-  padding: 10px;
-  width: 20px;
-  height: 33px;
+  width: 190px;
 }
 
 .fastest-time-container {
@@ -121,69 +102,61 @@
   /* border: 1px solid black; */
 }
 
-.fastest-time {
+.fastest-time-title {
   margin-top: 70px;
   display: flex;
   justify-content: center;
   color: black;
 }
 
-.fastest-time-user {
-  position: absolute;
+.fastest-time-user-cards div {
   display: flex;
   flex-direction: column;
-}
-
-.fastest-time-user div {
-  margin-top: 5px;
-  margin-left: 10px;
-  padding: 10px;
   width: 210px;
-  height: 55%;
+  height: 33px;
+  margin-top: 5px;
+  margin-left: 15px;
+  padding: 10px;
   background-color: rgb(255, 198, 207);
   border-radius: 5px;
   border-bottom: 1px solid red;
 }
 
-.fastest-time-num div {
-  position: relative;
-  display: grid;
+.fastest-time-num {
+  position: absolute;
+  display: flex;
   justify-content: flex-end;
-  margin-top: 5px;
-  margin-left: 12rem;
-  padding: 10px;
-  width: 20px;
-  height: 33px;
+  width: 190px;
 }
 
-/* responsiveness: leader board gets narrower between this screen size */
+/* responsiveness: leader board gets narrower between this screen size - mainly for desktop */
 @media (max-width: 750px) and (min-width: 450px) {
   .rank {
     width: 500px;
   }
 
-  .total-wins-user div {
-    width: 145px;
+  .total-wins-user-cards div {
+    width: 135px;
   }
 
-  .total-wins-num div {
-    margin-left: 8rem;
+  .total-wins-num {
+    width: 115px;
   }
 
-  .longest-win-streak-user div {
-    width: 145px;
+  .longest-win-streak-user-cards div {
+    width: 135px;
   }
 
-  .longest-win-streak-num div {
-    margin-left: 8rem;
+  .longest-win-streak-num {
+    width: 115px;
   }
 
-  .fastest-time-user div {
-    width: 145px;
+  .fastest-time-user-cards div {
+    width: 135px;
   }
 
-  .fastest-time-num div {
-    margin-left: 8rem;
+  .fastest-time-num {
+    width: 115px;
   }
 }
 
@@ -200,67 +173,43 @@
     height: 100%;
   }
 
-  .total-wins {
+  .total-wins-title {
     font-size: 18px;
   }
-  .total-wins-user {
+  .total-wins-user-cards div {
+    width: 110px;
+    height: 33px;
+    margin-left: 15px;
     font-size: 14px;
-  }
-  .total-wins-user div {
-    display: flex;
-    align-items: center;
-    width: 85%;
-    height: 55%;
   }
   .total-wins-num {
-    font-size: 14px;
-    margin-top: -2px;
-  }
-  .total-wins-num div {
-    margin-left: 80px;
-    height: 55%;
+    width: 90px;
   }
 
-  .longest-win-streak {
+  .longest-win-streak-title {
     font-size: 18px;
   }
-  .longest-win-streak-user {
+  .longest-win-streak-user-cards div {
+    width: 110px;
+    height: 33px;
+    margin-left: 15px;
     font-size: 14px;
-  }
-  .longest-win-streak-user div {
-    display: flex;
-    align-items: center;
-    width: 85%;
-    height: 55%;
   }
   .longest-win-streak-num {
-    font-size: 14px;
-    margin-top: -2px;
-  }
-  .longest-win-streak-num div {
-    margin-left: 80px;
-    height: 55%;
+    width: 90px;
   }
 
-  .fastest-time {
+  .fastest-time-title {
     font-size: 18px;
   }
-  .fastest-time-user {
+  .fastest-time-user-cards div {
+    width: 110px;
+    height: 33px;
+    margin-left: 15px;
     font-size: 14px;
-  }
-  .fastest-time-user div {
-    display: flex;
-    align-items: center;
-    width: 85%;
-    height: 55%;
   }
   .fastest-time-num {
-    font-size: 14px;
-    margin-top: -2px;
-  }
-  .fastest-time-num div {
-    margin-left: 80px;
-    height: 55%;
+    width: 90px;
   }
 }
 
@@ -277,66 +226,42 @@
     height: 100%;
   }
 
-  .total-wins {
-    font-size: 17px;
+  .total-wins-title {
+    font-size: 18px;
   }
-  .total-wins-user {
+  .total-wins-user-cards div {
+    width: 110px;
+    height: 33px;
+    margin-left: 10px;
     font-size: 14px;
-  }
-  .total-wins-user div {
-    display: flex;
-    align-items: center;
-    width: 85%;
-    height: 55%;
   }
   .total-wins-num {
-    font-size: 14px;
-    margin-top: -2px;
-  }
-  .total-wins-num div {
-    margin-left: 78px;
-    height: 55%;
+    width: 90px;
   }
 
-  .longest-win-streak {
-    font-size: 17px;
+  .longest-win-streak-title {
+    font-size: 18px;
   }
-  .longest-win-streak-user {
+  .longest-win-streak-user-cards div {
+    width: 110px;
+    height: 33px;
+    margin-left: 10px;
     font-size: 14px;
-  }
-  .longest-win-streak-user div {
-    display: flex;
-    align-items: center;
-    width: 85%;
-    height: 55%;
   }
   .longest-win-streak-num {
-    font-size: 14px;
-    margin-top: -2px;
-  }
-  .longest-win-streak-num div {
-    margin-left: 78px;
-    height: 55%;
+    width: 90px;
   }
 
-  .fastest-time {
-    font-size: 17px;
+  .fastest-time-title {
+    font-size: 18px;
   }
-  .fastest-time-user {
+  .fastest-time-user-cards div {
+    width: 110px;
+    height: 33px;
+    margin-left: 10px;
     font-size: 14px;
-  }
-  .fastest-time-user div {
-    display: flex;
-    align-items: center;
-    width: 85%;
-    height: 55%;
   }
   .fastest-time-num {
-    font-size: 14px;
-    margin-top: -2px;
-  }
-  .fastest-time-num div {
-    margin-left: 78px;
-    height: 55%;
+    width: 90px;
   }
 }

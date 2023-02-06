@@ -3,13 +3,9 @@ import axios from "../api/axios";
 import "../styles/rankStyles.css";
 
 const Rank = () => {
-  //   const [allStats, setAllStats] = React.useState([]);
   const [totalWinsUsers, setTotalWinsUsers] = React.useState();
-  const [totalWins, setTotalWins] = React.useState();
   const [winStreakUsers, setWinStreakUsers] = React.useState();
-  const [winStreak, setWinStreak] = React.useState();
   const [fastestWinUsers, setFastestWinUsers] = React.useState();
-  const [fastestWin, setFastestWin] = React.useState();
 
   React.useEffect(() => {
     async function fetchData() {
@@ -18,34 +14,39 @@ const Rank = () => {
         let users = sortDataTotalWins(response.data.users);
         setTotalWinsUsers(
           users.map((user, i) => {
-            return <div key={i}>{user.username}</div>; // using index as unique keys NOT good practice!
-          })
-        );
-        setTotalWins(
-          users.map((user, i) => {
-            return <div key={i}>{user.stats.wins}</div>;
+            return (
+              // using index as unique keys NOT good practice!
+              <div key={i} className="total-wins-user">
+                {user.username}
+                <span className="total-wins-num">{user.stats.wins}</span>
+              </div>
+            );
           })
         );
         users = sortDataWinStreak(response.data.users);
         setWinStreakUsers(
           users.map((user, i) => {
-            return <div key={i}>{user.username}</div>;
-          })
-        );
-        setWinStreak(
-          users.map((user, i) => {
-            return <div key={i}>{user.stats.longestWinStreak}</div>;
+            return (
+              <div key={i} className="longest-win-streak-user">
+                {user.username}{" "}
+                <span className="longest-win-streak-num">
+                  {user.stats.longestWinStreak}
+                </span>
+              </div>
+            );
           })
         );
         users = sortDataFastestWin(response.data.users);
         setFastestWinUsers(
           users.map((user, i) => {
-            return <div key={i}>{user.username}</div>;
-          })
-        );
-        setFastestWin(
-          users.map((user, i) => {
-            return <div key={i}>{user.stats.bestTimeToWin}</div>;
+            return (
+              <div key={i} className="fastest-time-user">
+                {user.username}
+                <span className="fastest-time-num">
+                  {user.stats.bestTimeToWin}
+                </span>
+              </div>
+            );
           })
         );
       } catch (err) {
@@ -117,19 +118,18 @@ const Rank = () => {
         <h2 className="rank-title">Leader Board</h2>
         <div className="rank-categories">
           <div className="total-wins-container">
-            <h3 className="total-wins">Total Wins</h3>
-            <div className="total-wins-user">{totalWinsUsers}</div>
-            <div className="total-wins-num">{totalWins}</div>
+            <h3 className="total-wins-title">Total Wins</h3>
+            <div className="total-wins-user-cards">{totalWinsUsers}</div>
           </div>
           <div className="longest-win-streak-container">
-            <h3 className="longest-win-streak">Win Streak</h3>
-            <div className="longest-win-streak-user">{winStreakUsers}</div>
-            <div className="longest-win-streak-num">{winStreak}</div>
+            <h3 className="longest-win-streak-title">Win Streak</h3>
+            <div className="longest-win-streak-user-cards">
+              {winStreakUsers}
+            </div>
           </div>
           <div className="fastest-time-container">
-            <h3 className="fastest-time">Time-to-Win</h3>
-            <div className="fastest-time-user">{fastestWinUsers}</div>
-            <div className="fastest-time-num">{fastestWin}</div>
+            <h3 className="fastest-time-title">Time-to-Win</h3>
+            <div className="fastest-time-user-cards">{fastestWinUsers}</div>
           </div>
         </div>
       </div>
