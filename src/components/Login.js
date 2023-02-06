@@ -3,6 +3,7 @@ import useAuth from "../hooks/useAuth";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import useInput from "../hooks/useInput";
 import useToggle from "../hooks/useToggle";
+import { ColorRing } from "react-loader-spinner";
 
 import axios from "../api/axios";
 const LOGIN_URL = "/auth"; // matches the backend that is created in node.js
@@ -21,6 +22,7 @@ const Login = () => {
   const [pwd, setPwd] = useState("");
   const [errMsg, setErrMsg] = useState("");
   const [check, toggleCheck] = useToggle("persist", false);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     userRef.current.focus();
@@ -34,6 +36,7 @@ const Login = () => {
     e.preventDefault();
     console.log(user, pwd);
     try {
+      setIsLoading(true);
       const response = await axios.post(
         LOGIN_URL,
         JSON.stringify({ user, pwd }),
@@ -48,9 +51,11 @@ const Login = () => {
       setAuth({ user, pwd, roles, accessToken });
       resetUser();
       setPwd("");
+      setIsLoading(false);
       //using react router to navigate away to specified page or to non specified page (home '/') after successful login
       navigate(from, { replace: true });
     } catch (err) {
+      setIsLoading(false);
       if (!err?.response) {
         setErrMsg("No Server Response");
       } else if (err.response?.status === 400) {
@@ -94,7 +99,17 @@ const Login = () => {
             value={pwd}
             required
           />
-          <button className="signin-button">Sign In</button>
+          {isLoading ? (
+            <ColorRing
+              colors={["#FF91AE", "#FFCBD8", "#EFBBCD", "#CB99C7", "#B78FCB"]}
+              height="40"
+              width="235"
+              ariaLabel="color-ring-loading"
+              wrapperClass="color-ring-loader-wrapper"
+            />
+          ) : (
+            <button className="signin-button">Sign In</button>
+          )}
           <div className="persistCheck">
             <input
               type="checkbox"

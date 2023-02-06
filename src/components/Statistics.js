@@ -26,10 +26,10 @@ const Statistics = (props) => {
         const rowWonArr = response.data._doc.stats.rowWon;
         const rowWon = rowWonArr[rowWonArr.length - 1];
         setRowChartData({
-          labels: rowData.map((data) => data.row),
+          labels: ["", "", "", "", "", ""],
           datasets: [
             {
-              label: "Wins",
+              label: " Wins",
               data: rowData?.map((data) => data.wins),
               backgroundColor: rowData?.map((data) =>
                 data.row === rowWon
@@ -38,7 +38,7 @@ const Statistics = (props) => {
               ),
               borderColor: "black",
               borderWidth: "1.5",
-              barThickness: 61.9,
+              barThickness: 61,
             },
           ],
         });
@@ -53,7 +53,7 @@ const Statistics = (props) => {
           maintainAspectRatio: false,
           scales: {
             x: {
-              suggestedMax: response.data._doc.stats.wins,
+              suggestedMax: response.data._doc.stats.wins / 2,
               grid: {
                 display: false,
                 drawBorder: false,
@@ -73,10 +73,17 @@ const Statistics = (props) => {
             },
           },
         });
+        // const localMaximum = () => {
+        //     let maxArr = []
+        //     for (let i = 0; i < response.data._doc.stats.rowWon.length; i++) {
+
+        //     }
+        //   }
       } catch (err) {
         console.error(err);
       }
     };
+
     if (props.gameOver) {
       getStatistics();
     }

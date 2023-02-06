@@ -45,8 +45,11 @@
     width: 100vw;
     height: 100vh;
   }
+  .statistics-container div {
+    width: 20.5rem;
+  }
   .barchart-row-container {
-    margin-right: 1.4rem;
-    margin-top: 3.5rem;
+    margin-right: 22px;
+    margin-top: 45px;
   }
 }

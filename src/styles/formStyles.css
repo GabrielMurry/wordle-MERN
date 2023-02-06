@@ -62,6 +62,12 @@ label,
 .signup-button,
 .signin-button {
   padding: 0.5rem;
+  cursor: pointer;
+}
+
+.color-ring-loader-wrapper {
+  margin-top: 12px;
+  width: 100%;
 }
 
 .instructions {
@@ -129,7 +135,6 @@ label,
 
 .persistCheck {
   font-size: 0.75rem;
-  margin-top: 10px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;

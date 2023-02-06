@@ -8,6 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "../api/axios";
+import { ColorRing } from "react-loader-spinner";
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
@@ -38,6 +39,8 @@ const Register = () => {
 
   const [errMsg, setErrMsg] = useState("");
 
+  const [isLoading, setIsLoading] = useState(false);
+
   useEffect(() => {
     userRef.current.focus();
   }, []);
@@ -65,6 +68,7 @@ const Register = () => {
       return;
     }
     try {
+      setIsLoading(true);
       const response = await axios.post(
         REGISTER_URL,
         JSON.stringify({ user, pwd }),
@@ -77,6 +81,7 @@ const Register = () => {
       console.log(response?.accessToken);
       console.log(JSON.stringify(response));
     } catch (err) {
+      setIsLoading(false);
       if (!err?.response) {
         setErrMsg("No Server Response");
       } else if (err.response?.status === 409) {
@@ -106,8 +111,10 @@ const Register = () => {
       setUser("");
       setPwd("");
       setMatchPwd("");
+      setIsLoading(false);
       navigate(from, { replace: true }); // navigate to specified or default page '/'
     } catch (err) {
+      setIsLoading(false);
       if (!err?.response) {
         setErrMsg("No Server Response");
       } else if (err.response?.status === 400) {
@@ -241,12 +248,22 @@ const Register = () => {
             Must match the first password input field.
           </p>
 
-          <button
-            className="signup-button"
-            disabled={!validName || !validPwd || !validMatch ? true : false}
-          >
-            Sign Up
-          </button>
+          {isLoading ? (
+            <ColorRing
+              colors={["#FF91AE", "#FFCBD8", "#EFBBCD", "#CB99C7", "#B78FCB"]}
+              height="40"
+              width="235"
+              ariaLabel="color-ring-loading"
+              wrapperClass="color-ring-loader-wrapper"
+            />
+          ) : (
+            <button
+              className="signup-button"
+              disabled={!validName || !validPwd || !validMatch ? true : false}
+            >
+              Sign Up
+            </button>
+          )}
         </form>
         <p className="already-registered-container">
           Already registered?
