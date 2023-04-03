@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Wordle Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A fully functional and responsive Worlde clone created on the MERN stack.
 
-## Available Scripts
+For a more personal experience, I included user authentication with JWT access, refresh tokens, and cookies. This enabled me to perform CRUD operations on user data (stored in MongoDB) to display individual and global statistics on a leaderboard, so users can compare and compete against eachother.
 
-In the project directory, you can run:
+# Goals
+Build a fullstack project from scratch.
 
-### `npm start`
+Strengthen my skills in React, Express, and Node.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Create a responsive, user-friendly design using CS with a mobile-first approach.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Deploy my frontend and backend separately with continuous deployment.
 
-### `npm test`
+Have the backend and API run "indefinitely", receiving requests and sending responses from the frontend.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Manage user info, data, and statistics in MongoDB using Mongoose Schemas.
 
-### `npm run build`
+Engineer CRUD operations on user data to display statistics on a global player leaderboard.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Create a REST API to issue the client app's access and refresh token in an httpOnly cookie for better security.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Encrypt user login passwords using bcrypt and salt, with persist login state on refresh.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Next Steps
+Real-time multiplayer - play against a friend to see who can guess the correct word first.
 
-### `npm run eject`
+Allow users to choose customizable color palettes.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Display a page of personal data with graphs and charts based on win/loss percentages, average time-to-win, win probabilities for each row, etc.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+For inclusivity (and personal foreign language practice), add language options such as Spanish. May require an API to access other random foreign language solution word.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Add a "forgot my password" option on the login page.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Add an option to delete account.
